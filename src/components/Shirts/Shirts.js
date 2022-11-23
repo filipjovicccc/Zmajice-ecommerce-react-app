@@ -6,7 +6,7 @@ function Shirts(props) {
     <article className="article">
       <img className="images" src={props.item.img} alt="shirts" />
       <div className="section">
-        <h3>{props.item.title}</h3>
+        <p>{props.item.title}</p>
         <p>{props.item.description}</p>
         <span>{props.item.price}</span>
       </div>
