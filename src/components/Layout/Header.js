@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
 
-function Header() {
+function Header(props) {
   const iconStyle = { fontSize: "1.8em" };
   return (
     <div className="header">
@@ -15,7 +15,7 @@ function Header() {
       <div className="right-header">
         <input placeholder="Pretraži" type="text" />
         <AiOutlineSearch style={iconStyle} />
-        <FaShoppingCart style={iconStyle} />
+        <FaShoppingCart onClick={props.openCart} style={iconStyle} />
       </div>
     </div>
   );

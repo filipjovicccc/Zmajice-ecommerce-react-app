@@ -8,10 +8,21 @@ import { useState } from "react";
 
 function App() {
   const [items, setItems] = useState(shirts);
+  const [showIsTrue, setShowIsTrue] = useState(false);
+
+  const closeCartHandler = () => {
+    setShowIsTrue(false);
+  };
+
+  const openCartHandler = () => {
+    setShowIsTrue(true);
+  };
+
   return (
     <div className="App">
-      <Header />
-      <Cart />
+      <Header openCart={openCartHandler} />
+      {showIsTrue && <Cart closeCart={closeCartHandler} />}
+
       <ShirtsList items={items} />
       <Footer />
     </div>
