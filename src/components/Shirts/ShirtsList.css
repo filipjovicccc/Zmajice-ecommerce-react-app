@@ -1,6 +1,17 @@
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  
+}
 .shirt-list{
     display: flex;
 
     flex-wrap: wrap;
-    margin-left: 200px;
+    margin-left: 40px;
+  }
+
+  .product-section{
+    margin-top: 30px;
+    width: 210px;
+    text-align: center;
   }

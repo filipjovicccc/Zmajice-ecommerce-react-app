@@ -1,7 +1,11 @@
 import React from "react";
 import "./Shirts.css";
 
+
+
 function Shirts(props) {
+
+ 
   return (
     <article className="article">
       <img className="images" src={props.item.img} alt="shirts" />

@@ -1,15 +1,17 @@
 .header{
     width: 100%;
-    /* border: 1px solid black; */
-    display: flex;
+     display: flex;
     flex-direction: row;
     justify-content:space-between;
+    margin-top: 20px;
 }
 
 .left-header{
     display: flex;
     justify-content: space-between;
+    width: 200px;
     word-spacing: 10px;
+    margin-left: 30px;
 }
 
 .right-header{
@@ -24,4 +26,8 @@
 .right-header input {
     height: 30px;
     border: none
+}
+
+.header-image{
+    width: 45px
 }

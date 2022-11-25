@@ -4,3 +4,8 @@
     width: 100%;
     color: white;
 }
+
+.bottom-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
