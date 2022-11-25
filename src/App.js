@@ -1,10 +1,9 @@
 import "./App.css";
-import Header from "./components/Layout/Header";
 import shirts from "./components/data/data";
-import ShirtsList from "./components/Shirts/ShirtsList";
-import Footer from "./components/Layout/Footer";
-import Cart from "./components/Cart/Cart";
+import Home from "./pages/Home";
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import ProductInformation from "./pages/ProductInformation";
 
 function App() {
   const [items, setItems] = useState(shirts);
@@ -19,14 +18,30 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header openCart={openCartHandler} />
-      {showIsTrue && <Cart closeCart={closeCartHandler} />}
-
-      <ShirtsList items={items} />
-      <Footer />
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Home
+            items={items}
+            showIsTrue={showIsTrue}
+            setShowIsTrue={setShowIsTrue}
+            closeCartHandler={closeCartHandler}
+            openCartHandler={openCartHandler}
+          />
+        }
+      />
+      <Route path="/product" element={<ProductInformation />} />
+    </Routes>
   );
 }
 
 export default App;
+{
+  /* <Header openCart={openCartHandler} />
+      {showIsTrue && <Cart closeCart={closeCartHandler} />}
+
+      <Home items={items} />
+
+      <Footer /> */
+}

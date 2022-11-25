@@ -4,6 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
 import HeartLogo from "../../assets/images/logo.png";
 
+
 function Header(props) {
   const iconStyle = { fontSize: "1.8em" };
   return (

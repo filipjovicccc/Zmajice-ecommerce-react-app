@@ -1,0 +1,8 @@
+.kategories-list{
+    list-style: none;
+    text-align: left;
+}
+
+.kategories-list li {
+    font-weight: 100;
+}

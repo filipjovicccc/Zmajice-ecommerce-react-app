@@ -30,27 +30,26 @@
    line-height: 0.1;
   
   }
-  /* .section h3{
-    margin-right: 20px;
-  } */
-   /* .btn-section {
-      display: flex;
-      padding: 10px;
-      justify-content: space-between;
-      width: 200px;
-  
-    
-      
-  }
-  
-  .btn {
-    background-color: rgb(0, 34, 255);
-    width: 150px;
-    height: 38px;
-    border-radius: 7px 7px 7px 7px;
+
+  .discount{
+    background-color: #f3364C;
     color: white;
-  } */
-  
+    width: 112px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* position: relative; */
+    /* float: right;
+    top: 20px; */
+    position: relative;
+    left: 80px;
+    top: 40px;
+    /* z-index: 1; */
+    
+  }
+ 
   
   @media(max-width:778px){
   

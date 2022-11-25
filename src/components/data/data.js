@@ -40,6 +40,7 @@ const shirts = [
     description: "Duks-unisex",
     price: 3150,
     img: img1,
+    naPopustu: true,
   },
   {
     id: 2,
@@ -47,6 +48,7 @@ const shirts = [
     description: "Muška majica",
     porice: 1499,
     img: img2,
+    naPopustu: false,
   },
 
   {
@@ -55,6 +57,7 @@ const shirts = [
     description: "Muška majica",
     price: 1499,
     img: img3,
+    naPopustu: true,
   },
 
   {
@@ -63,6 +66,7 @@ const shirts = [
     description: "Ženska majica",
     price: 1499,
     img: img4,
+    naPopustu: true,
   },
 
   {
@@ -71,6 +75,7 @@ const shirts = [
     description: "Ženska majica",
     price: 1499,
     img: img5,
+    naPopustu: true,
   },
 
   {
@@ -79,6 +84,7 @@ const shirts = [
     description: "Muška majica",
     price: 1499,
     img: img6,
+    naPopustu: true,
   },
 
   {
@@ -87,6 +93,7 @@ const shirts = [
     description: "Muška majica",
     price: 1499,
     img: img7,
+    naPopustu: true,
   },
 
   {
@@ -95,6 +102,7 @@ const shirts = [
     description: "Ženska majica",
     price: 1990,
     img: img8,
+    naPopustu: true,
   },
 
   {
@@ -103,6 +111,7 @@ const shirts = [
     description: "Duks-unisex",
     price: 3600,
     img: img9,
+    naPopustu: true,
   },
 
   {
@@ -111,6 +120,7 @@ const shirts = [
     description: "Duks-unisex",
     price: 3600,
     img: img10,
+    naPopustu: false,
   },
 
   {
@@ -119,6 +129,7 @@ const shirts = [
     description: "Duks-unisex",
     price: 3600,
     img: img11,
+    naPopustu: true,
   },
 
   {
@@ -127,6 +138,7 @@ const shirts = [
     description: "Muška majica",
     price: 1790,
     img: img12,
+    naPopustu: false,
   },
 ];
 
