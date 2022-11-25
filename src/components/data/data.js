@@ -41,6 +41,7 @@ const shirts = [
     price: 3150,
     img: img1,
     naPopustu: true,
+    isClicked: false,
   },
   {
     id: 2,
@@ -49,6 +50,7 @@ const shirts = [
     porice: 1499,
     img: img2,
     naPopustu: false,
+    isClicked: false,
   },
 
   {
@@ -58,6 +60,7 @@ const shirts = [
     price: 1499,
     img: img3,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -67,6 +70,7 @@ const shirts = [
     price: 1499,
     img: img4,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -76,6 +80,7 @@ const shirts = [
     price: 1499,
     img: img5,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -85,6 +90,7 @@ const shirts = [
     price: 1499,
     img: img6,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -94,6 +100,7 @@ const shirts = [
     price: 1499,
     img: img7,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -103,6 +110,7 @@ const shirts = [
     price: 1990,
     img: img8,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -112,6 +120,7 @@ const shirts = [
     price: 3600,
     img: img9,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -121,6 +130,7 @@ const shirts = [
     price: 3600,
     img: img10,
     naPopustu: false,
+    isClicked: false,
   },
 
   {
@@ -130,6 +140,7 @@ const shirts = [
     price: 3600,
     img: img11,
     naPopustu: true,
+    isClicked: false,
   },
 
   {
@@ -139,6 +150,7 @@ const shirts = [
     price: 1790,
     img: img12,
     naPopustu: false,
+    isClicked: false,
   },
 ];
 

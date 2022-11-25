@@ -4,9 +4,11 @@ import Home from "./pages/Home";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import ProductInformation from "./pages/ProductInformation";
+import { productContext } from "./store/product-context";
 
 function App() {
   const [items, setItems] = useState(shirts);
+
   const [showIsTrue, setShowIsTrue] = useState(false);
 
   const closeCartHandler = () => {
@@ -17,22 +19,29 @@ function App() {
     setShowIsTrue(true);
   };
 
+  const value = {
+    items,
+    setItems,
+  };
+
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Home
-            items={items}
-            showIsTrue={showIsTrue}
-            setShowIsTrue={setShowIsTrue}
-            closeCartHandler={closeCartHandler}
-            openCartHandler={openCartHandler}
-          />
-        }
-      />
-      <Route path="/product" element={<ProductInformation />} />
-    </Routes>
+    <productContext.Provider value={value}>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              items={items}
+              showIsTrue={showIsTrue}
+              setShowIsTrue={setShowIsTrue}
+              closeCartHandler={closeCartHandler}
+              openCartHandler={openCartHandler}
+            />
+          }
+        />
+        <Route path="/product" element={<ProductInformation />} />
+      </Routes>
+    </productContext.Provider>
   );
 }
 
