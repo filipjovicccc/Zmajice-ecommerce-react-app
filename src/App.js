@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import ProductInformation from "./pages/ProductInformation";
 import { productContext } from "./store/product-context";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   const [items, setItems] = useState(shirts);
@@ -25,23 +26,25 @@ function App() {
   };
 
   return (
-    <productContext.Provider value={value}>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              items={items}
-              showIsTrue={showIsTrue}
-              setShowIsTrue={setShowIsTrue}
-              closeCartHandler={closeCartHandler}
-              openCartHandler={openCartHandler}
-            />
-          }
-        />
-        <Route path="/product" element={<ProductInformation />} />
-      </Routes>
-    </productContext.Provider>
+    <CartProvider>
+      <productContext.Provider value={value}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                items={items}
+                showIsTrue={showIsTrue}
+                setShowIsTrue={setShowIsTrue}
+                closeCartHandler={closeCartHandler}
+                openCartHandler={openCartHandler}
+              />
+            }
+          />
+          <Route path="product/:id" element={<ProductInformation />} />
+        </Routes>
+      </productContext.Provider>
+    </CartProvider>
   );
 }
 

@@ -35,13 +35,13 @@ const img12 =
   "https://brendly-prod.s3.eu-central-1.amazonaws.com/3532/2634/3/140309/pictures/3/Bela.jpg?u=2022-11-17T21:25:40.062Z&cacheblock=true";
 const shirts = [
   {
-    id: 1,
+    id: Math.random(),
     title: "Crnji od petka unisex duks",
     description: "Duks-unisex",
     price: 3150,
     img: img1,
     naPopustu: true,
-    isClicked: false,
+    isClicked: true,
   },
   {
     id: 2,

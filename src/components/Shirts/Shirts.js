@@ -5,40 +5,49 @@ import { productContext } from "../../store/product-context";
 
 function Shirts(props) {
   const { items, setItems } = useContext(productContext);
-  const toProducts = () => {
-    const changeCurrent = {
-      ...props.item,
-      isClicked: !props.item.isClicked,
-    };
-    props.setItems((prevItems) => {
-      const itemWithoutCurrent = prevItems.map((item) => {
-        if (item.id === props.item.id) {
-          return changeCurrent;
-        }
-        return item;
-      });
-      return itemWithoutCurrent;
-    });
-  };
 
-  // const toProducts = () => {
-  //   setItems([
-  //     ...items,
-  //     {
-  //       id: props.item.id,
-  //       img: props.item.img,
-  //       title: props.item.img,
-  //       description: props.item.description,
-  //       price: props.item.price,
-  //     },
-  //   ]);
+  // const toProducts = (e) => {
+
+  // const changeCurrent = {
+  //   ...props.item,
+  //   isClicked: !props.item.isClicked,
   // };
+  // props.setItems((prevItems) => {
+  //   const itemWithoutCurrent = prevItems.map((item) => {
+  //     if (item.id === props.item.id) {
+  //       return changeCurrent;
+  //     }
+  //     return item;
+  //   });
+  //   return itemWithoutCurrent;
+  // });
+  // };
+
+
+  const toProducts = () => {
+    setItems([
+      ...items,
+      {
+        id: props.item.id,
+        img: props.item.img,
+        title: props.item.title,
+        description: props.item.description,
+        price: props.item.price,
+        isClicked: props.item.isClicked,
+      },
+    ]);
+  };
 
   return (
     <article className="article">
       {props.item.naPopustu && <div className="discount">Na popustu</div>}
-      <Link onClick={toProducts} to="/product">
-        <img className="images" src={props.item.img} alt="shirts" />
+      <Link to={`/product/${props.item.id}`}>
+        <img
+          onClick={toProducts}
+          className="images"
+          src={props.item.img}
+          alt="shirts"
+        />
       </Link>
       ;
       <div className="section">
