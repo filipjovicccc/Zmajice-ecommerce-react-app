@@ -1,11 +1,38 @@
 import React from "react";
 import Modal from "../UI/Modal";
 import "./Cart.css";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
+import CartItem from "./CartItem";
 
 function Cart(props) {
+  const cartCtx = useContext(CartContext);
+
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const hasItems = cartCtx.items.length > 0;
+
+  const cartItemRemoveHandler = (id) => {};
+
+  const cartItemAddHandler = (item) => {};
+
+  const cartItems = (
+    <ul>
+      {cartCtx.items.map((item) => (
+        <CartItem
+          key={item.id}
+          title={item.title}
+          price={item.price}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+          onAdd={cartItemAddHandler.bind(null, item)}
+        />
+      ))}
+    </ul>
+  );
+
   return (
     <Modal>
       <div className="cart">
+        {cartItems}
         <div className="cart-header">
           <h4>Korpa</h4>
           <button onClick={props.closeCart} className="button-header">
@@ -13,9 +40,7 @@ function Cart(props) {
           </button>
         </div>
         <div className="footer-cart">
-          <p>Cena: 1499 RSD</p>
-          <p>Standardna isporuka: 350 RSD</p>
-          <p id="bold">Ukupno: 1849 RSD</p>
+          <p id="bold">{totalAmount}</p>
           <button className="footer-cart-button">IDI NA KASU</button>
         </div>
       </div>

@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import "./Shirts.css";
 import { Link } from "react-router-dom";
 import { productContext } from "../../store/product-context";
+import CartContext from "../../store/cart-context";
 
 function Shirts(props) {
   const { items, setItems } = useContext(productContext);
+  const cartCtx = useContext(CartContext);
 
   // const toProducts = (e) => {
 
@@ -22,10 +24,19 @@ function Shirts(props) {
   //   return itemWithoutCurrent;
   // });
   // };
-
+  // const addToCartHandler = () => {
+  //   cartCtx.addItem({
+  //     id: props.item.id,
+  //     title: props.item.title,
+  //     description: props.item.description,
+  //     price: props.item.price,
+  //     isClicked: props.item.isClicked,
+  //     img: props.item.img,
+  //   });
+  // };
 
   const toProducts = () => {
-    setItems([
+    const newItems = [
       ...items,
       {
         id: props.item.id,
@@ -35,7 +46,10 @@ function Shirts(props) {
         price: props.item.price,
         isClicked: props.item.isClicked,
       },
-    ]);
+    ];
+
+    setItems(newItems);
+    // props.onAddToCart(newItems);
   };
 
   return (

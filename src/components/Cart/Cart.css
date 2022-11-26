@@ -1,7 +1,7 @@
  .cart{
   display: flex;
   flex-direction: column;
-  height: 900px;
+  height: 700px;
   justify-content: space-between;
  }
  
