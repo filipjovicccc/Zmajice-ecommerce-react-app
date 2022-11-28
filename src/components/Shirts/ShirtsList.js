@@ -13,14 +13,7 @@ function ShirtsList(props) {
       </div>
       <div className="shirt-list">
         {props.items.map((item) => {
-          return (
-            <Shirts
-              // onAddToCart={props.onAddToCart}
-              key={item.id}
-              id={item.id}
-              item={item}
-            />
-          );
+          return <Shirts key={item.id} id={item.id} item={item} />;
         })}
       </div>
     </div>

@@ -1,25 +1,25 @@
 import React from "react";
 import { useContext } from "react";
 import { productContext } from "../store/product-context";
+import { useParams } from "react-router-dom";
 import Products from "../components/Products/Products";
+import Header from "../components/Layout/Header";
+import Footer from "../components/Layout/Footer";
 
 function ProductInformation(props) {
   const { items, setItems } = useContext(productContext);
-
-  // const getProducts = (item) => {
-  //   const filteredItems = item.filter((item) => item.isClicked === true);
-
-  //   return filteredItems;
-  // };
+  const { id } = useParams();
+  const products = [items.find((i) => i.id == id)];
 
   return (
     <div>
-      <h1>HELLO FROM PRODUCTS INFORMATION</h1>
+      <Header />
       <div>
-        {items.map((item) => {
+        {products.map((item) => {
           return <Products key={item.id} id={item.id} item={item} />;
         })}
       </div>
+      <Footer />
     </div>
   );
 }

@@ -23,6 +23,7 @@ function Cart(props) {
         <CartItem
           key={item.id}
           title={item.title}
+          img={item.img}
           amount={item.amount}
           price={item.price}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
@@ -47,15 +48,6 @@ function Cart(props) {
           <button className="footer-cart-button">IDI NA KASU</button>
         </div>
       </div>
-
-      {/* <div className="total">
-        <p>asdasdasdas</p>
-        <span>Total Amount</span>
-        <span>{totalAmount}</span>
-      </div> */}
-      {/* <div className="actions">
-        {hasItems && <button className={classes.button}>Order</button>}
-      </div> */}
     </Modal>
   );
 }

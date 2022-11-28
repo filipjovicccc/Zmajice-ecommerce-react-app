@@ -6,9 +6,7 @@ function Footer() {
     <div className="footer">
       <div>
         <h5>Saznaj kada stignu novi proizvodi</h5>
-        <input type="text" placeholder="Unesi svoju email adresu">
-          {/* <button>Prijavi se</button> */}
-        </input>
+        <input type="text" placeholder="Unesi svoju email adresu"></input>
         <h4>Jedinstveni printovi samo za tebe</h4>
         <h3>INTERENET PRODAVNICA OUTDOOR FREAK NOVI SAD</h3>
         <h3>Bul oslobodjenja 109, Novi Sad</h3>
