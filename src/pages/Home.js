@@ -8,7 +8,9 @@ function Home(props) {
     <div>
       <Header openCart={props.openCartHandler} />
       {props.showIsTrue && <Cart closeCart={props.closeCartHandler} />}
-      <ShirtsList onAddToCart={props.onAddToCart} items={props.items} />
+      <ShirtsList 
+      // onAddToCart={props.onAddToCart}
+       items={props.items} />
       <Footer />
     </div>
   );

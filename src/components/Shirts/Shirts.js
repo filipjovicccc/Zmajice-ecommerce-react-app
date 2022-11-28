@@ -24,48 +24,49 @@ function Shirts(props) {
   //   return itemWithoutCurrent;
   // });
   // };
-  // const addToCartHandler = () => {
-  //   cartCtx.addItem({
-  //     id: props.item.id,
-  //     title: props.item.title,
-  //     description: props.item.description,
-  //     price: props.item.price,
-  //     isClicked: props.item.isClicked,
-  //     img: props.item.img,
-  //   });
-  // };
-
-  const toProducts = () => {
-    const newItems = [
-      ...items,
-      {
-        id: props.item.id,
-        img: props.item.img,
-        title: props.item.title,
-        description: props.item.description,
-        price: props.item.price,
-        isClicked: props.item.isClicked,
-      },
-    ];
-
-    setItems(newItems);
-    // props.onAddToCart(newItems);
+  const addToCartHandler = () => {
+    cartCtx.addItem({
+      id: props.item.id,
+      title: props.item.title,
+      description: props.item.description,
+      price: props.item.price,
+      isClicked: props.item.isClicked,
+      img: props.item.img,
+    });
   };
+
+  // const toProducts = () => {
+  //   const newItems = [
+  //     ...items,
+  //     {
+  //       id: props.item.id,
+  //       img: props.item.img,
+  //       title: props.item.title,
+  //       description: props.item.description,
+  //       price: props.item.price,
+  //       isClicked: props.item.isClicked,
+  //     },
+  //   ];
+
+  //   setItems(newItems);
+  // props.onAddToCart(newItems);
+  // };
 
   return (
     <article className="article">
       {props.item.naPopustu && <div className="discount">Na popustu</div>}
-      <Link to={`/product/${props.item.id}`}>
-        <img
-          onClick={toProducts}
-          className="images"
-          src={props.item.img}
-          alt="shirts"
-        />
-      </Link>
-      ;
+      <div className="overflow">
+        <Link to={`/product/${props.item.id}`}>
+          <img
+            onClick={addToCartHandler}
+            className="images"
+            src={props.item.img}
+            alt="shirts"
+          />
+        </Link>
+      </div>
       <div className="section">
-        <p>{props.item.title}</p>
+        <h5>{props.item.title}</h5>
         <p>{props.item.description}</p>
         <span>{props.item.price}</span>
       </div>

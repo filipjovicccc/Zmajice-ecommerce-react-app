@@ -41,7 +41,7 @@ const shirts = [
     price: 3150,
     img: img1,
     naPopustu: true,
-    isClicked: true,
+    isClicked: false,
   },
   {
     id: 2,

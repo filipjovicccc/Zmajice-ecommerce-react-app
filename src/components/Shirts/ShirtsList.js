@@ -15,7 +15,7 @@ function ShirtsList(props) {
         {props.items.map((item) => {
           return (
             <Shirts
-              onAddToCart={props.onAddToCart}
+              // onAddToCart={props.onAddToCart}
               key={item.id}
               id={item.id}
               item={item}

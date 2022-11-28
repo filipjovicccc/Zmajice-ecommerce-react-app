@@ -13,14 +13,17 @@ function Cart(props) {
 
   const cartItemRemoveHandler = (id) => {};
 
-  const cartItemAddHandler = (item) => {};
+  const cartItemAddHandler = (item) => {
+    cartCtx.addItem({ ...item, amount: 1 });
+  };
 
   const cartItems = (
-    <ul>
+    <ul className="added-cart">
       {cartCtx.items.map((item) => (
         <CartItem
           key={item.id}
           title={item.title}
+          amount={item.amount}
           price={item.price}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}
@@ -32,12 +35,12 @@ function Cart(props) {
   return (
     <Modal>
       <div className="cart">
-        {cartItems}
         <div className="cart-header">
           <h4>Korpa</h4>
           <button onClick={props.closeCart} className="button-header">
             Nazad
           </button>
+          {cartItems}
         </div>
         <div className="footer-cart">
           <p id="bold">{totalAmount}</p>

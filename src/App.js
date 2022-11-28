@@ -20,11 +20,11 @@ function App() {
     setShowIsTrue(true);
   };
 
-  const addToCartHandler = (items) => {
-    setItems((prevItems) => {
-      return [items, ...prevItems];
-    });
-  };
+  // const addToCartHandler = (items) => {
+  //   setItems((prevItems) => {
+  //     return [items, ...prevItems];
+  //   });
+  // };
 
   const value = {
     items,
@@ -44,7 +44,7 @@ function App() {
                 setShowIsTrue={setShowIsTrue}
                 closeCartHandler={closeCartHandler}
                 openCartHandler={openCartHandler}
-                onAddToCart={addToCartHandler}
+                // onAddToCart={addToCartHandler}
               />
             }
           />
