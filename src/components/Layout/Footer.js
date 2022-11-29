@@ -1,25 +1,48 @@
 import React from "react";
 import "./Footer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Footer() {
   return (
     <div className="footer">
       <div>
         <h5>Saznaj kada stignu novi proizvodi</h5>
-        <input type="text" placeholder="Unesi svoju email adresu"></input>
-        <h4>Jedinstveni printovi samo za tebe</h4>
-        <h3>INTERENET PRODAVNICA OUTDOOR FREAK NOVI SAD</h3>
-        <h3>Bul oslobodjenja 109, Novi Sad</h3>
-        <h3>MB: 66686604</h3>
-        <h3>PIB: 113249966</h3>
-        <p>FB SIGN</p>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Recipient's username"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Button
+          </button>
+        </div>
+
+        <p>
+          Jedinstveni printovi samo za tebe
+          <br />
+          <br />
+          INTERENET PRODAVNICA OUTDOOR FREAK NOVI SAD <br />
+          Bul oslobodjenja 109, Novi Sad
+          <br /> MB: 66686604 <br />
+          PIB: 113249966 FB SIGN
+        </p>
       </div>
 
       <div className="bottom-footer">
-        <h5>Prijavi reklamaciju</h5>
-        <h5>Uslovi prodaje</h5>
-        <h5>Povracaj i zamena</h5>
-        <h5>Porucivanje i dostava</h5>
+        <span className="span">
+          {" "}
+          Prijavi reklamaciju <span />
+          <span className="span"> Uslovi prodaje</span>
+          <span className="span"> Povracaj i zamena</span>
+          <span className="span">Porucivanje i dostava</span>
+        </span>
       </div>
       <p>Copyright @ 2022 Brendly</p>
     </div>
