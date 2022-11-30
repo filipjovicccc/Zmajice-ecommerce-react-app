@@ -16,7 +16,9 @@ function ProductInformation(props) {
       <Header />
       <div>
         {products.map((item) => {
-          return <Products key={item.id} id={item.id} item={item} />;
+          return (
+            <Products paramId={id} key={item.id} id={item.id} item={item} />
+          );
         })}
       </div>
       <Footer />

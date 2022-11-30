@@ -3,7 +3,9 @@ import ShirtsList from "../components/Shirts/ShirtsList";
 import Header from "../components/Layout/Header";
 import Cart from "../components/Cart/Cart";
 import Footer from "../components/Layout/Footer";
+import { useParams } from "react-router-dom";
 function Home(props) {
+
   return (
     <div>
       <Header openCart={props.openCartHandler} />

@@ -1,21 +1,32 @@
 import React from "react";
-import { useState, useContext } from "react";
+import {  useContext } from "react";
 import { Fragment } from "react";
 import "./Product.css";
+
 import CartContext from "../../store/cart-context";
 
 function Products(props) {
-  const cartCtx = useContext(CartContext);
+  const { products, setProducts } = useContext(CartContext);
 
-  const addToCartHandler = () => {
-    cartCtx.addItem({
-      id: props.item.id,
-      title: props.item.title,
-      description: props.item.description,
-      price: props.item.price,
-      isClicked: props.item.isClicked,
-      img: props.item.img,
+
+
+  const addToCart = (item) => {
+    setProducts(() => {
+      return [item];
     });
+  };
+
+  const saveDataHandler = (e) => {
+    e.preventDefault();
+    const saveData = {
+      img: props.item.img,
+      paramId: props.paramId,
+      title: props.item.title,
+      price: props.item.price,
+      description: props.item.description,
+      id: props.item.id,
+    };
+    addToCart(saveData);
   };
   return (
     <Fragment>
@@ -40,7 +51,7 @@ function Products(props) {
               <div className="product-box">2XL</div>
               <div className="product-box">3XL</div>
             </div>
-            <button onClick={addToCartHandler} className="product-button">
+            <button onClick={saveDataHandler} className="product-button">
               DODAJ U KORPU
             </button>
           </h5>

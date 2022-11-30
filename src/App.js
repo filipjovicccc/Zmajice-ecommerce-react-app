@@ -5,10 +5,12 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import ProductInformation from "./pages/ProductInformation";
 import { productContext } from "./store/product-context";
-import CartProvider from "./store/CartProvider";
+// import CartProvider from "./store/CartProvider";
+import CartContext from "./store/cart-context";
 
 function App() {
   const [items, setItems] = useState(shirts);
+  const [products, setProducts] = useState([]);
 
   const [showIsTrue, setShowIsTrue] = useState(false);
 
@@ -24,9 +26,13 @@ function App() {
     items,
     setItems,
   };
+  const cartValue = {
+    products,
+    setProducts,
+  };
 
   return (
-    <CartProvider>
+    <CartContext.Provider value={cartValue}>
       <productContext.Provider value={value}>
         <Routes>
           <Route
@@ -44,16 +50,8 @@ function App() {
           <Route path="product/:id" element={<ProductInformation />} />
         </Routes>
       </productContext.Provider>
-    </CartProvider>
+    </CartContext.Provider>
   );
 }
 
 export default App;
-{
-  /* <Header openCart={openCartHandler} />
-      {showIsTrue && <Cart closeCart={closeCartHandler} />}
-
-      <Home items={items} />
-
-      <Footer /> */
-}

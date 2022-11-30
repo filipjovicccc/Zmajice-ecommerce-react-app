@@ -1,16 +1,19 @@
 import "./CartItem.css";
 
 const CartItem = (props) => {
-  const price = `$${props.price.toFixed(2)}`;
-  console.log(props.onAdd);
 
   return (
     <li className="cart-item">
       <div>
-        <h2>{props.name}</h2>
+        <h5>{props.item.title}</h5>
+        <h6>{props.item.description}</h6>
+
         <div className="summary">
-          <span className="price">{price}</span>
-          <span className="amount">x {props.amount}</span>
+          <span className="price">{props.item.price}RSD</span>
+          <span className="amount">x </span>
+        </div>
+        <div>
+          <img className="cart-image" src={props.item.img} alt="shirts" />
         </div>
       </div>
       <div className="action">
