@@ -2,7 +2,6 @@ import React from "react";
 import Modal from "../UI/Modal";
 import "./Cart.css";
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
 import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
 
@@ -13,8 +12,6 @@ function Cart(props) {
 
   const cartProducts = [products.find((i) => i.id == newItemId)];
 
-
-
   return (
     <Modal>
       <div className="cart">
@@ -23,7 +20,7 @@ function Cart(props) {
           <button onClick={props.closeCart} className="button-header">
             Nazad
           </button>
-      
+          {/* {cartItems} */}
           <ul className="added-cart">
             {cartProducts.map((item) => (
               <CartItem key={item.id} id={item.id} item={item} />
@@ -31,7 +28,7 @@ function Cart(props) {
           </ul>
         </div>
         <div className="footer-cart">
-       
+          {/* <p id="bold">{totalAmount}</p> */}
           <button className="footer-cart-button">IDI NA KASU</button>
         </div>
       </div>

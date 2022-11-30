@@ -8,8 +8,6 @@ import CartContext from "../../store/cart-context";
 function Products(props) {
   const { products, setProducts } = useContext(CartContext);
 
-
-
   const addToCart = (item) => {
     setProducts(() => {
       return [item];
