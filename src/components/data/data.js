@@ -46,7 +46,7 @@ const shirts = [
     id: 2,
     title: "Mutniji od Dunava bela majica",
     description: "Muška majica",
-    porice: 1499,
+    price: 1499,
     img: img2,
     naPopustu: false,
   },

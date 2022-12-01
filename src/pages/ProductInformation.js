@@ -9,15 +9,26 @@ import Footer from "../components/Layout/Footer";
 function ProductInformation(props) {
   const { items, setItems } = useContext(productContext);
   const { id } = useParams();
-  const products = [items.find((i) => i.id == id)];
+
+  const findItem = [items.find((i) => i.id == id)];
 
   return (
     <div>
       <Header />
       <div>
-        {products.map((item) => {
+        {findItem.map((item) => {
           return (
-            <Products paramId={id} key={item.id} id={item.id} item={item} />
+            <Products
+              // addToCart={addToCart}
+              // paramId={id}
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              desc={item.description}
+              price={item.price}
+              img={item.img}
+              item={item}
+            />
           );
         })}
       </div>

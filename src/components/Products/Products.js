@@ -1,41 +1,25 @@
-import React from "react";
-import {  useContext } from "react";
+import React, { useEffect } from "react";
+import { useContext } from "react";
 import { Fragment } from "react";
+import { useCart } from "react-use-cart";
 import "./Product.css";
 
 import CartContext from "../../store/cart-context";
 
 function Products(props) {
-  const { products, setProducts } = useContext(CartContext);
+  const { addItem } = useCart();
 
-  const addToCart = (item) => {
-    setProducts(() => {
-      return [item];
-    });
-  };
 
-  const saveDataHandler = (e) => {
-    e.preventDefault();
-    const saveData = {
-      img: props.item.img,
-      paramId: props.paramId,
-      title: props.item.title,
-      price: props.item.price,
-      description: props.item.description,
-      id: props.item.id,
-    };
-    addToCart(saveData);
-  };
   return (
     <Fragment>
       <div className="product">
         <div className="overflow">
-          <img className="product-image" src={props.item.img} alt="shirts" />
+          <img className="product-image" src={props.img} alt="shirts" />
         </div>
         <div className="product-information">
-          <h1>{props.item.title}</h1>
-          <h4>{props.item.price}RSD</h4>
-          <h5>{props.item.description}</h5>
+          <h1>{props.title}</h1>
+          <h4>{props.price}</h4>
+          <h5>{props.desc}</h5>
           <h5>BOJA</h5>
           <h5>
             VELIČINA{" "}
@@ -49,7 +33,10 @@ function Products(props) {
               <div className="product-box">2XL</div>
               <div className="product-box">3XL</div>
             </div>
-            <button onClick={saveDataHandler} className="product-button">
+            <button
+              onClick={() => addItem(props.item, props.price)}
+              className="product-button"
+            >
               DODAJ U KORPU
             </button>
           </h5>

@@ -7,6 +7,7 @@ import ProductInformation from "./pages/ProductInformation";
 import { productContext } from "./store/product-context";
 // import CartProvider from "./store/CartProvider";
 import CartContext from "./store/cart-context";
+import { CartProvider } from "react-use-cart";
 
 function App() {
   const [items, setItems] = useState(shirts);
@@ -34,21 +35,23 @@ function App() {
   return (
     <CartContext.Provider value={cartValue}>
       <productContext.Provider value={value}>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                items={items}
-                showIsTrue={showIsTrue}
-                setShowIsTrue={setShowIsTrue}
-                closeCartHandler={closeCartHandler}
-                openCartHandler={openCartHandler}
-              />
-            }
-          />
-          <Route path="product/:id" element={<ProductInformation />} />
-        </Routes>
+        <CartProvider>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  items={items}
+                  showIsTrue={showIsTrue}
+                  setShowIsTrue={setShowIsTrue}
+                  closeCartHandler={closeCartHandler}
+                  openCartHandler={openCartHandler}
+                />
+              }
+            />
+            <Route path="product/:id" element={<ProductInformation />} />
+          </Routes>
+        </CartProvider>
       </productContext.Provider>
     </CartContext.Provider>
   );
