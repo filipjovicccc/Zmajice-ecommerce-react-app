@@ -13,10 +13,9 @@ function Cart(props) {
     cartTotal,
     updateItemQuantity,
     removeItem,
-   
+    emptyCart,
   } = useCart();
 
-  
   {
     console.log(items);
   }
@@ -69,6 +68,19 @@ function Cart(props) {
               );
             })}
           </ul>
+          <div>
+            <h5>
+              Cart ({totalUniqueItems}) total items:({totalItems})
+            </h5>
+            <h5>Ukupno : {cartTotal} RSD</h5>
+            <button
+              onClick={() => {
+                emptyCart();
+              }}
+            >
+              Isprazni korpu
+            </button>
+          </div>
         </div>
         <div className="footer-cart">
           <button className="footer-cart-button">IDI NA KASU</button>
