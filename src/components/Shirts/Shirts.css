@@ -59,6 +59,26 @@
     top: 40px;
  
   }
+
+  .circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-left: 6px;
+    border: 0.2px solid gray;
+
+  }
+
+  .color-circles{
+
+    width: 16.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -8px;
+    margin-bottom: 20px;
+    
+  }
  
   
   @media(max-width:778px){

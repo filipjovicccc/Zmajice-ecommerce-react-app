@@ -3,8 +3,6 @@ import { useContext } from "react";
 import { productContext } from "../store/product-context";
 import { useParams } from "react-router-dom";
 import Products from "../components/Products/Products";
-import Header from "../components/Layout/Header";
-import Footer from "../components/Layout/Footer";
 
 function ProductInformation(props) {
   const { items, setItems } = useContext(productContext);
@@ -14,13 +12,10 @@ function ProductInformation(props) {
 
   return (
     <div>
-      <Header />
       <div>
         {findItem.map((item) => {
           return (
             <Products
-              // addToCart={addToCart}
-              // paramId={id}
               key={item.id}
               id={item.id}
               title={item.title}
@@ -28,11 +23,11 @@ function ProductInformation(props) {
               price={item.price}
               img={item.img}
               item={item}
+              quantity={item.quantity}
             />
           );
         })}
       </div>
-      <Footer />
     </div>
   );
 }

@@ -8,8 +8,6 @@ import CartContext from "../../store/cart-context";
 
 function Products(props) {
   const { addItem } = useCart();
-
-
   return (
     <Fragment>
       <div className="product">
@@ -20,6 +18,7 @@ function Products(props) {
           <h1>{props.title}</h1>
           <h4>{props.price}</h4>
           <h5>{props.desc}</h5>
+          {props.quantity}
           <h5>BOJA</h5>
           <h5>
             VELIČINA{" "}
@@ -34,7 +33,7 @@ function Products(props) {
               <div className="product-box">3XL</div>
             </div>
             <button
-              onClick={() => addItem(props.item, props.price)}
+              onClick={() => addItem(props.item, props.quantity + 1)}
               className="product-button"
             >
               DODAJ U KORPU

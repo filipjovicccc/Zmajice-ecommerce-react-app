@@ -4,26 +4,48 @@
   height: 700px;
   justify-content: space-between;
  }
+
+ .cart-item{
+  display: flex;
+  margin-bottom: 30px;
+ 
+ }
  
  .cart-header{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+   padding: 4px;
+  height: 20px;
+  margin-top: -10px;
+  
+
  }
 
  .button-header{
   color: #ff5858;
   border: 1px solid #ff5858;
-  height: 40px;
-  position: absolute;
-  left: 30vw;
-
+  height: 30px;
+   margin-top: 11px;
+   width: 62px;
+   font-size: 0.76em;
+   font-weight: bold;
+  
+ }
+ .delete-item{
+  float:right;
+  border: none;
+ margin-right: -30px;
  }
 .footer-cart{
   text-align: center;
+  margin-top:63vh;
+  
+ 
 }
- #bold{
+ /* #bold{
   font-weight: bold;
- }
+ } */
 
  .footer-cart-button{
   width: 100%;
@@ -32,15 +54,60 @@
   color: white;
   font-weight: bold;
   font-size: large;
+
+  border:none;
  }
 
  .added-cart{
   list-style: none;
+ margin-right: 50px;
+  margin-left: -30px;
+  margin-top: 30px;
  }
 
  .cart-image{
-  width: 80px;
-  height: 90px;
+  width: 150px;
+  height: 120px;
+  float: left
  }
 
+ .title{
+ display: flex;
+ justify-content: space-between;
+  margin-bottom: -28px;
+  margin-top: -10px;
+  font-weight: 200;
+ }
+ .title h4{
+  margin-right: 80px;
+ }
+
+ .description-price{
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: small;
+ 
+ }
+
+ .description-price p {
+   margin-bottom: -2px;
+ }
+ .price{
+  color:#ff5858;
+  margin-bottom: 25px;
+ }
+
+ .add-buttons{
+  border:none;
+  font-weight:bold;
+  color:black
+ }
+
+ .action{
+  width: 83px;
+display: flex;
+justify-content: space-between;
+ }
  

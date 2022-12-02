@@ -41,6 +41,8 @@ const shirts = [
     price: 3150,
     img: img1,
     naPopustu: true,
+    quantity: 0,
+    color: ["black", "dimgray", "red"],
   },
   {
     id: 2,
@@ -49,6 +51,8 @@ const shirts = [
     price: 1499,
     img: img2,
     naPopustu: false,
+    quantity: 0,
+    color: ["white", "gray", "yellow", "pink", "aqua", "red"],
   },
 
   {
@@ -58,6 +62,8 @@ const shirts = [
     price: 1499,
     img: img3,
     naPopustu: true,
+    quantity: 0,
+    color: ["black", "aqua", "red", "midnightblue"],
   },
 
   {
@@ -67,6 +73,8 @@ const shirts = [
     price: 1499,
     img: img4,
     naPopustu: true,
+    quantity: 0,
+    color: ["black", "aqua", "red", "midnightblue"],
   },
 
   {
@@ -76,6 +84,8 @@ const shirts = [
     price: 1499,
     img: img5,
     naPopustu: true,
+    quantity: 0,
+    color: ["white", "lightgray", "yellow", "aqua", "red"],
   },
 
   {
@@ -85,6 +95,8 @@ const shirts = [
     price: 1499,
     img: img6,
     naPopustu: true,
+    quantity: 0,
+    color: ["black", "aqua", "red", "midnightblue"],
   },
 
   {
@@ -94,6 +106,8 @@ const shirts = [
     price: 1499,
     img: img7,
     naPopustu: true,
+    quantity: 0,
+    color: ["black", "aqua", "red", "midnightblue"],
   },
 
   {
@@ -103,6 +117,8 @@ const shirts = [
     price: 1990,
     img: img8,
     naPopustu: true,
+    quantity: 0,
+    color: ["white", "lightgray", "gray", "yellow"],
   },
 
   {
@@ -112,6 +128,8 @@ const shirts = [
     price: 3600,
     img: img9,
     naPopustu: true,
+    quantity: 0,
+    color: ["white", "black", "lightgray", "gray", "red"],
   },
 
   {
@@ -121,6 +139,8 @@ const shirts = [
     price: 3600,
     img: img10,
     naPopustu: false,
+    quantity: 0,
+    color: ["white", "black", "lightgray", "gray", "red"],
   },
 
   {
@@ -130,6 +150,8 @@ const shirts = [
     price: 3600,
     img: img11,
     naPopustu: true,
+    quantity: 0,
+    color: ["white", "black", "lightgray", "gray", "red"],
   },
 
   {
@@ -139,6 +161,17 @@ const shirts = [
     price: 1790,
     img: img12,
     naPopustu: false,
+    quantity: 0,
+    color: [
+      "white",
+      "black",
+      "lightgray",
+      "gray",
+      "yellow",
+      "aqua",
+      "red",
+      "midnightblue",
+    ],
   },
 ];
 
