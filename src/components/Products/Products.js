@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
-import { useContext } from "react";
+import React from "react";
+
 import { Fragment } from "react";
 import { useCart } from "react-use-cart";
 import "./Product.css";
-
-import CartContext from "../../store/cart-context";
 
 function Products(props) {
   const { addItem } = useCart();

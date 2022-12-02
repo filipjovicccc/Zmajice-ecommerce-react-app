@@ -7,13 +7,11 @@ import { useCart } from "react-use-cart";
 function Cart(props) {
   const {
     isEmpty,
-    totalUniqueItems,
     items,
-    totalItems,
-    cartTotal,
+     cartTotal,
     updateItemQuantity,
     removeItem,
-    emptyCart,
+ 
   } = useCart();
 
   if (isEmpty) {
