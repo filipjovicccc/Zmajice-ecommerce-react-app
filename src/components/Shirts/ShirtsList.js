@@ -9,7 +9,7 @@ function ShirtsList(props) {
     <div className="wrapper">
       <div className="product-section">
         <ProductType />
-        <Kategories />
+        <Kategories filterCategories={props.filterCategories} />
       </div>
       <div className="shirt-list">
         {props.items.map((item) => {

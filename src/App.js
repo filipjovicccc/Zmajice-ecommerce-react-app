@@ -9,11 +9,18 @@ import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import { CartProvider } from "react-use-cart";
+import PageTwo from "./pages/PageTwo";
 
 function App() {
   const [items, setItems] = useState(shirts);
-
   const [showIsTrue, setShowIsTrue] = useState(false);
+  const filteredItemsPageTwo = items.filter((item) => item.id > 12);
+  const filteredItemsHome = items.filter((item) => item.id < 13);
+  const filteredCategories = (category) => {
+    const newItems = items.filter((item) => item.category == category);
+    setItems(newItems);
+  };
+  // console.log(items.filter((item) => item.category === "Muška"));
 
   const closeCartHandler = () => {
     setShowIsTrue(false);
@@ -39,15 +46,16 @@ function App() {
               path="/"
               element={
                 <Home
-                  items={items}
-                  showIsTrue={showIsTrue}
-                  setShowIsTrue={setShowIsTrue}
-                  closeCartHandler={closeCartHandler}
-                  openCartHandler={openCartHandler}
+                  filterCategories={filteredCategories}
+                  items={filteredItemsHome}
                 />
               }
             />
             <Route path="product/:id" element={<ProductInformation />} />
+            <Route
+              path="page2"
+              element={<PageTwo items={filteredItemsPageTwo} />}
+            />
           </Routes>
           <Footer />
         </Router>

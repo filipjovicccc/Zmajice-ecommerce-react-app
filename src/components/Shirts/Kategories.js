@@ -1,7 +1,7 @@
 import React from "react";
 import "./Kategories.css";
 
-function Kategories() {
+function Kategories({ filterCategories }) {
   return (
     <div>
       Kategories
@@ -19,7 +19,8 @@ function Kategories() {
         <li>Special</li>
         <li>BBBL</li>
         <li>Crni Petak</li>
-        <li>Muška garderoba</li>
+        {/* <button onClick={() => filterCategories("Muška")}> MuŠKA </button> */}
+        <li onClick={() => filterCategories("Muška")}>Muška garderoba</li>
         <li>Ženska garederoba</li>
       </ul>
     </div>

@@ -28,6 +28,7 @@ function Shirts(props) {
         <p>{props.item.description}</p>
         <span>{props.item.price}</span>
       </div>
+      <div></div>
     </article>
   );
 }
