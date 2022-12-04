@@ -11,14 +11,14 @@ function Kategories({ filterCategories }) {
         <li>Horoskop</li>
         <li>50 pa nagore</li>
         <li>Leteći Holandjanin</li>
-        <li>Kraljice</li>
+        <li onClick={() => filterCategories("Kraljice")}>Kraljice</li>
         <li>Legende</li>
         <li>Oktobar</li>
         <li>Oktobar Patriot</li>
-        <li>Novembar</li>
-        <li>Special</li>
+        <li onClick={() => filterCategories("November")}>Novembar</li>
+        <li onClick={() => filterCategories("Special")}>Special</li>
         <li>BBBL</li>
-        <li>Crni Petak</li>
+        <li onClick={() => filterCategories("Crni Petak")}>Crni Petak</li>
         {/* <button onClick={() => filterCategories("Muška")}> MuŠKA </button> */}
         <li onClick={() => filterCategories("Muška")}>Muška garderoba</li>
         <li>Ženska garederoba</li>

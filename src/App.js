@@ -10,6 +10,7 @@ import Header from "./components/Layout/Header";
 import Footer from "./components/Layout/Footer";
 import { CartProvider } from "react-use-cart";
 import PageTwo from "./pages/PageTwo";
+import Pagination from "./components/Shirts/Pagination";
 
 function App() {
   const [items, setItems] = useState(shirts);
@@ -57,6 +58,7 @@ function App() {
               element={<PageTwo items={filteredItemsPageTwo} />}
             />
           </Routes>
+          <Pagination />
           <Footer />
         </Router>
       </CartProvider>
