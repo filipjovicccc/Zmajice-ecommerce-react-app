@@ -43,15 +43,22 @@
   padding: 7px 14px;
   text-decoration: none;
   margin: 7px;
+
 }
 .pagination a:hover{
   background-color: #ff5858;
 }
+.link {padding: 15px;
+    
+}
 
-.link.active {
-  background-color: red;
+.pagination a.active {
+  background-color: #f3364C;;
   color: white;
-  display: none;
+
+}
+#one{
+ paddin: 1px
 }
 
 /* .pagination a:hover(.active) {background-color: #ddd;} */

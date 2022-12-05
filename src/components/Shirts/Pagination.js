@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function Pagination() {
   const [toggleActiveButton, setToggleActiveButton] = useState(false);
+
   const activeButton = () => {
     setToggleActiveButton(true);
   };
@@ -13,25 +14,40 @@ function Pagination() {
       <p>&laquo;</p>
       <Link
         onClick={activeButton}
-        className={`link.${"active" && toggleActiveButton}`}
-        to={"/"}
+    
+        className={`link ${!toggleActiveButton ? "" : "active"}`}
       >
         1
       </Link>
 
-      <Link className={`link ${"link" ? "link.active" : toggleActiveButton}`}>
+      <Link
+        onClick={activeButton}
+        className={`link ${!toggleActiveButton ? "" : "active"}`}
+      >
         2
       </Link>
-      <Link className={`link ${"link" ? "link.active" : toggleActiveButton}`}>
+      <Link
+        onClick={activeButton}
+        className={`link ${!toggleActiveButton ? "" : "active"}`}
+      >
         3
       </Link>
-      <Link className={`link ${"link" ? "link.active" : toggleActiveButton}`}>
+      <Link
+        onClick={activeButton}
+        className={`link ${!toggleActiveButton ? "" : "active"}`}
+      >
         4
       </Link>
-      <Link className={`link ${"link" ? "link.active" : toggleActiveButton}`}>
+      <Link
+        onClick={activeButton}
+        className={`link ${!toggleActiveButton ? "" : "active"}`}
+      >
         5
       </Link>
-      <Link className={`link ${"link" ? "link.active" : toggleActiveButton}`}>
+      <Link
+        onClick={activeButton}
+        className={`link ${!toggleActiveButton ? "" : "active"}`}
+      >
         6
       </Link>
       <Link>&raquo;</Link>
