@@ -18,6 +18,10 @@ function App() {
   const filteredItemsPageTwo = items.filter((item) => item.id > 12);
   const filteredItemsHome = items.filter((item) => item.id < 13);
   const filteredCategories = (category) => {
+    if (category === "all") {
+      setItems(shirts);
+      return;
+    }
     const newItems = items.filter((item) => item.category == category);
     setItems(newItems);
   };

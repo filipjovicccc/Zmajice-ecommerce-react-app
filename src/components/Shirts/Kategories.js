@@ -6,22 +6,23 @@ function Kategories({ filterCategories }) {
     <div>
       Kategories
       <ul className="kategories-list">
-        <li>Sve</li>
-        <li>Akcija</li>
-        <li>Horoskop</li>
-        <li>50 pa nagore</li>
-        <li>Leteći Holandjanin</li>
+        <li onClick={() => filterCategories("all")}>Sve</li>
+        <li onClick={() => filterCategories("Akcija")}>Akcija</li>
+        <li onClick={() => filterCategories("Horoskop")}>Horoskop</li>
+        <li onClick={() => filterCategories("50")}>50 pa nagore</li>
+        <li oncClick={() => filterCategories("Holandjanin")}>
+          Leteći Holandjanin
+        </li>
         <li onClick={() => filterCategories("Kraljice")}>Kraljice</li>
-        <li>Legende</li>
-        <li>Oktobar</li>
-        <li>Oktobar Patriot</li>
+        <li onClick={() => filterCategories("Legende")}>Legende</li>
+        <li onClick={() => filterCategories("Oktobar")}>Oktobar</li>
+        <li onClick={() => filterCategories("Patriot")}>Oktobar Patriot</li>
         <li onClick={() => filterCategories("November")}>Novembar</li>
         <li onClick={() => filterCategories("Special")}>Special</li>
-        <li>BBBL</li>
+        <li onClick={() => filterCategories("BBL")}>BBBL</li>
         <li onClick={() => filterCategories("Crni Petak")}>Crni Petak</li>
-        {/* <button onClick={() => filterCategories("Muška")}> MuŠKA </button> */}
         <li onClick={() => filterCategories("Muška")}>Muška garderoba</li>
-        <li>Ženska garederoba</li>
+        <li onClick={() => filterCategories("Ženska")}>Ženska garederoba</li>
       </ul>
     </div>
   );
