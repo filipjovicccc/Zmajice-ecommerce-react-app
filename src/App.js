@@ -25,7 +25,7 @@ function App() {
     const newItems = items.filter((item) => item.category == category);
     setItems(newItems);
   };
-  // console.log(items.filter((item) => item.category === "Muška"));
+ 
 
   const closeCartHandler = () => {
     setShowIsTrue(false);
