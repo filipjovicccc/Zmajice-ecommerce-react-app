@@ -6,7 +6,6 @@ import links from "../data/linkData";
 function Pagination() {
   const [activeLinks, setActiveLinks] = useState(links);
 
-
   const activeButton = (id) => {
     setActiveLinks(
       activeLinks.map((item) => {
@@ -45,47 +44,3 @@ function Pagination() {
 }
 
 export default Pagination;
-
-{
-  /* <p>&laquo;</p>
-<Link
-  onClick={activeButton}
-  style={styleButton}
-  // className={`link ${!toggleActiveButton ? "" : "active"}`}
->
-  1
-</Link>
-
-<Link
-  onClick={activeButton}
-  style={styleButton}
-  // className={`link ${!toggleActiveButton ? "" : "active"}`}
->
-  2
-</Link>
-<Link
-  onClick={activeButton}
-  className={`link ${!toggleActiveButton ? "" : "active"}`}
->
-  3
-</Link>
-<Link
-  onClick={activeButton}
-  className={`link ${!toggleActiveButton ? "" : "active"}`}
->
-  4
-</Link>
-<Link
-  onClick={activeButton}
-  className={`link ${!toggleActiveButton ? "" : "active"}`}
->
-  5
-</Link>
-<Link
-  onClick={activeButton}
-  className={`link ${!toggleActiveButton ? "" : "active"}`}
->
-  6
-</Link>
-<Link>&raquo;</Link> */
-}
