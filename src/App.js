@@ -25,7 +25,6 @@ function App() {
     const newItems = items.filter((item) => item.category == category);
     setItems(newItems);
   };
- 
 
   const closeCartHandler = () => {
     setShowIsTrue(false);
@@ -48,7 +47,7 @@ function App() {
           {showIsTrue && <Cart closeCart={closeCartHandler} />}
           <Routes>
             <Route
-              path="/"
+              path="page1"
               element={
                 <Home
                   filterCategories={filteredCategories}

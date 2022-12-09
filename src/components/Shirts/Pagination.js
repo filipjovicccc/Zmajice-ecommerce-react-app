@@ -1,58 +1,90 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import links from "../data/linkData";
 
 function Pagination() {
-  const [toggleActiveButton, setToggleActiveButton] = useState(false);
+  const [activeLinks, setActiveLinks] = useState(links);
 
-  const activeButton = () => {
-    setToggleActiveButton(true);
+  const activeButton = (id) => {
+    setActiveLinks(
+      activeLinks.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              active: true,
+            }
+          : item.id !== id
+          ? {
+              ...item,
+              active: false,
+            }
+          : item
+      )
+    );
   };
 
   return (
     <div className="pagination">
-      <p>&laquo;</p>
-      <Link
-        onClick={activeButton}
-    
-        className={`link ${!toggleActiveButton ? "" : "active"}`}
-      >
-        1
-      </Link>
-
-      <Link
-        onClick={activeButton}
-        className={`link ${!toggleActiveButton ? "" : "active"}`}
-      >
-        2
-      </Link>
-      <Link
-        onClick={activeButton}
-        className={`link ${!toggleActiveButton ? "" : "active"}`}
-      >
-        3
-      </Link>
-      <Link
-        onClick={activeButton}
-        className={`link ${!toggleActiveButton ? "" : "active"}`}
-      >
-        4
-      </Link>
-      <Link
-        onClick={activeButton}
-        className={`link ${!toggleActiveButton ? "" : "active"}`}
-      >
-        5
-      </Link>
-      <Link
-        onClick={activeButton}
-        className={`link ${!toggleActiveButton ? "" : "active"}`}
-      >
-        6
-      </Link>
-      <Link>&raquo;</Link>
+      {activeLinks.map((item) => {
+        return (
+          <Link
+            key={item.id}
+            id={item.id}
+            onClick={() => activeButton(item.id)}
+            className={`link ${item.active ? "active" : ""}`}
+            to={`page${item.name}`}
+          >
+            {item.name}
+          </Link>
+        );
+      })}
     </div>
   );
 }
 
 export default Pagination;
+
+{
+  /* <p>&laquo;</p>
+<Link
+  onClick={activeButton}
+  style={styleButton}
+  // className={`link ${!toggleActiveButton ? "" : "active"}`}
+>
+  1
+</Link>
+
+<Link
+  onClick={activeButton}
+  style={styleButton}
+  // className={`link ${!toggleActiveButton ? "" : "active"}`}
+>
+  2
+</Link>
+<Link
+  onClick={activeButton}
+  className={`link ${!toggleActiveButton ? "" : "active"}`}
+>
+  3
+</Link>
+<Link
+  onClick={activeButton}
+  className={`link ${!toggleActiveButton ? "" : "active"}`}
+>
+  4
+</Link>
+<Link
+  onClick={activeButton}
+  className={`link ${!toggleActiveButton ? "" : "active"}`}
+>
+  5
+</Link>
+<Link
+  onClick={activeButton}
+  className={`link ${!toggleActiveButton ? "" : "active"}`}
+>
+  6
+</Link>
+<Link>&raquo;</Link> */
+}

@@ -10,7 +10,7 @@ function Kategories({ filterCategories }) {
         <li onClick={() => filterCategories("Akcija")}>Akcija</li>
         <li onClick={() => filterCategories("Horoskop")}>Horoskop</li>
         <li onClick={() => filterCategories("50")}>50 pa nagore</li>
-        <li oncClick={() => filterCategories("Holandjanin")}>
+        <li onClick={() => filterCategories("Holandjanin")}>
           Leteći Holandjanin
         </li>
         <li onClick={() => filterCategories("Kraljice")}>Kraljice</li>
