@@ -6,21 +6,22 @@ import links from "../data/linkData";
 function Pagination() {
   const [activeLinks, setActiveLinks] = useState(links);
 
+
   const activeButton = (id) => {
     setActiveLinks(
-      activeLinks.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              active: true,
-            }
-          : item.id !== id
-          ? {
-              ...item,
-              active: false,
-            }
-          : item
-      )
+      activeLinks.map((item) => {
+        if (item.id === id) {
+          return {
+            ...item,
+            active: true,
+          };
+        } else {
+          return {
+            ...item,
+            active: false,
+          };
+        }
+      })
     );
   };
 

@@ -17,12 +17,12 @@ const links = [
   },
   {
     name: 4,
-    id: 3,
+    id: 4,
     active: false,
   },
   {
     name: 5,
-    id: 3,
+    id: 5,
     active: false,
   },
 ];
