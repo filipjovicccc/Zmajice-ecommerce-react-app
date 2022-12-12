@@ -15,8 +15,12 @@ import Pagination from "./components/Shirts/Pagination";
 function App() {
   const [items, setItems] = useState(shirts);
   const [showIsTrue, setShowIsTrue] = useState(false);
+  const [bold, setBold] = useState(false);
   const filteredItemsPageTwo = items.filter((item) => item.id > 12);
   const filteredItemsHome = items.filter((item) => item.id < 13);
+  const productStyle = {
+    fontWeight: bold ? "bold" : "",
+  };
   const filteredCategories = (category) => {
     if (category === "all") {
       setItems(shirts);
@@ -24,6 +28,8 @@ function App() {
     }
     const newItems = items.filter((item) => item.category == category);
     setItems(newItems);
+
+    setBold(!bold);
   };
 
   const closeCartHandler = () => {
@@ -50,6 +56,7 @@ function App() {
               path="page1"
               element={
                 <Home
+                  productStyle={productStyle}
                   filterCategories={filteredCategories}
                   items={filteredItemsHome}
                 />

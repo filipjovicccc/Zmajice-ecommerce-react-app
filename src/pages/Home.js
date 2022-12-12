@@ -10,13 +10,10 @@ function Home(props) {
         <ShirtsList
           items={props.items}
           filterCategories={props.filterCategories}
+          productStyle={props.productStyle}
         />
-       
 
-        {/* <Link to={"page2"}>
-          <button>Page 2</button>
-        </Link> */}
-      </CartProvider>
+       </CartProvider>
     </Fragment>
   );
 }

@@ -77,6 +77,7 @@ const shirts = [
     quantity: 0,
     color: ["black", "dimgray", "red"],
     category: "Crni Petak",
+    styled: false,
   },
   {
     id: 2,
@@ -88,6 +89,7 @@ const shirts = [
     quantity: 0,
     color: ["white", "gray", "yellow", "pink", "aqua", "red"],
     category: "Muška",
+    styled: false,
   },
 
   {

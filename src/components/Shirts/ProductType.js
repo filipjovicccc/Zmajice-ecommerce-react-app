@@ -5,7 +5,7 @@ function ProductType() {
   return (
     <div className="products">
       <ul className="product-list">
-        Tip proizvoda
+        <h4> Tip proizvoda</h4>
         <li>Muška majica</li>
         <li>Ženska majica</li>
         <li>Dečija majica - unisex</li>

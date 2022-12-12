@@ -41,8 +41,28 @@
    margin-top: 10px;
 
   }
+
+  .section p {
+    font-weight: 300;
+    font-size: 0.8rem;
+
+  }
+
   .section h5 {
     margin: -1px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .price-span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 7px;
+    color: black;
+  }
+
+  .price-color {
+    color: #ff5858;
   }
 
   .discount{

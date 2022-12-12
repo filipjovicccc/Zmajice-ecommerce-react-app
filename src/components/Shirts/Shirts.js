@@ -26,9 +26,13 @@ function Shirts(props) {
         </div>
         <h5>{props.item.title}</h5>
         <p>{props.item.description}</p>
-        <span>{props.item.price}</span>
+       
+        <span
+          className={`price-span ${props.item.naPopustu ? "price-color" : ""}`}
+        >
+          Od {props.item.price} RSD
+        </span>
       </div>
-      <div></div>
     </article>
   );
 }
