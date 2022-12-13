@@ -1,67 +1,27 @@
-import { useState } from "react";
 import "./Kategories.css";
 
-function Kategories({ productStyle, filterCategories }) {
+function Kategories({ filterCategories }) {
   return (
     <div>
       <ul className="kategories-list">
         <h4>Kategories</h4>
-        <li
-          style={productStyle}
-          //  style={productStyle}
-          onClick={() => filterCategories("all")}
-        >
-          Sve
-        </li>
-        <li
-          style={productStyle}
-          //  style={productStyle}
-          onClick={() => filterCategories("Akcija")}
-        >
-          Akcija
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Horoskop")}>
-          Horoskop
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("50")}>
-          50 pa nagore
-        </li>
-        <li
-          style={productStyle}
-          onClick={() => filterCategories("Holandjanin")}
-        >
+        <li onClick={() => filterCategories("all")}>Sve</li>
+        <li onClick={() => filterCategories("Akcija")}>Akcija</li>
+        <li onClick={() => filterCategories("Horoskop")}>Horoskop</li>
+        <li onClick={() => filterCategories("50")}>50 pa nagore</li>
+        <li onClick={() => filterCategories("Holandjanin")}>
           Leteći Holandjanin
         </li>
-        <li style={productStyle} onClick={() => filterCategories("Kraljice")}>
-          Kraljice
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Legende")}>
-          Legende
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Oktobar")}>
-          Oktobar
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Patriot")}>
-          Oktobar Patriot
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("November")}>
-          Novembar
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Special")}>
-          Special
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("BBL")}>
-          BBBL
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Crni Petak")}>
-          Crni Petak
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Muška")}>
-          Muška garderoba
-        </li>
-        <li style={productStyle} onClick={() => filterCategories("Ženska")}>
-          Ženska garederoba
-        </li>
+        <li onClick={() => filterCategories("Kraljice")}>Kraljice</li>
+        <li onClick={() => filterCategories("Legende")}>Legende</li>
+        <li onClick={() => filterCategories("Oktobar")}>Oktobar</li>
+        <li onClick={() => filterCategories("Patriot")}>Oktobar Patriot</li>
+        <li onClick={() => filterCategories("November")}>Novembar</li>
+        <li onClick={() => filterCategories("Special")}>Special</li>
+        <li onClick={() => filterCategories("BBL")}>BBBL</li>
+        <li onClick={() => filterCategories("Crni Petak")}>Crni Petak</li>
+        <li onClick={() => filterCategories("Muška")}>Muška garderoba</li>
+        <li onClick={() => filterCategories("Ženska")}>Ženska garederoba</li>
       </ul>
     </div>
   );

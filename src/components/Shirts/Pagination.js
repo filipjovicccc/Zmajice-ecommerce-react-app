@@ -4,11 +4,11 @@ import { useState } from "react";
 import links from "../data/linkData";
 
 function Pagination() {
-  const [activeLinks, setActiveLinks] = useState(links);
+  const [usingLinks, setUsingLinks] = useState(links);
 
   const activeButton = (id) => {
-    setActiveLinks(
-      activeLinks.map((item) => {
+    setUsingLinks(
+      usingLinks.map((item) => {
         if (item.id === id) {
           return {
             ...item,
@@ -26,7 +26,7 @@ function Pagination() {
 
   return (
     <div className="pagination">
-      {activeLinks.map((item) => {
+      {usingLinks.map((item) => {
         return (
           <Link
             key={item.id}

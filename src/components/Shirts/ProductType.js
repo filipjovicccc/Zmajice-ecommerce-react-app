@@ -1,66 +1,82 @@
 import React from "react";
 import "./ProductType.css";
-import { useState } from "react";
 
-function ProductType() {
-  // const [toggleActive, setToggleActive] = useState(false);
-
-  // const toggleChecked = () => {
-  //   setToggleActive(toggleActive);
-  // };
-
+function ProductType({ filteredProducts }) {
   return (
     <div className="products">
       <ul className="product-list">
         <h4> Tip proizvoda</h4>
-        <li className="main-list">
-          <input checked="checked" type="checkbox" /> Muška majica
-          <span
-            // onClick={toggleChecked}
-            // className={`mark show`}
-            className="mark"
-          ></span>
-        </li>
-        <li className="main-list">
-          {" "}
-          <input checked="checked" type="checkbox" />
-          <span className="mark"></span>
-          Ženska majica
+        <li>
+          <label onClick={filteredProducts("Muška majica")} class="main">
+            Muška majica
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
         <li>
-          {" "}
-          <input className="products-check" type="checkbox" />
-          Dečija majica - unisex
+          <label onClick={filteredProducts("Žensla majica")} class="main">
+            Ženska majica
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
         <li>
-          {" "}
-          <input className="products-check" type="checkbox" />
-          Duks - unisex
+          <label
+            onClick={filteredProducts("Dečija majica - unisex")}
+            class="main"
+          >
+            Dečija majica - unisex
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
         <li>
-          {" "}
-          <input className="products-check" type="checkbox" />
-          Duks basic - unisex
+          <label onClick={filteredProducts("Duks - unisex")} class="main">
+            Duks - unisex
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
         <li>
-          {" "}
-          <input className="products-check" type="checkbox" />
-          Duks premium - unisex
+          <label onClick={filteredProducts("Duks basic - unisex")} class="main">
+            Duks basic - unisex
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
         <li>
-          {" "}
-          <input className="products-check" type="checkbox" />
-          Bebi bodi kratak rukav
+          <label
+            onClick={filteredProducts("Duks premium - unisex")}
+            class="main"
+          >
+            Duks premium - unisex
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
         <li>
-          {" "}
-          <input className="products-check" type="checkbox" />
-          Bebi bodi dug rukav
+          <label
+            onClick={filteredProducts("Bebi bodi kratak rukav")}
+            class="main"
+          >
+            Bebi bodi kratak rukav
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
         <li>
-          {" "}
-          <input className="products-check" type="checkbox" />
-          Portika
+          <label onClick={filteredProducts("Bebi bodi dug rukav")} class="main">
+            Bebi bodi dug rukav
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
+        </li>
+        <li>
+          <label onClick={filteredProducts("Portika")} class="main">
+            Portika
+            <input type="checkbox" />
+            <span class="geekmark"></span>
+          </label>
         </li>
       </ul>
     </div>

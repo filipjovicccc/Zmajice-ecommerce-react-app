@@ -7,3 +7,7 @@
 .kategories-list li {
     font-weight: 400;
 }
+
+.kategories-list li:active{
+    font-weight: 600;
+}

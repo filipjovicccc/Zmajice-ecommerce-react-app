@@ -31,6 +31,12 @@ function App() {
 
     setBold(!bold);
   };
+  const filteredProducts = (description) => {
+    const newItems = items.filter((item) => item.description == description);
+    setItems(newItems);
+
+    setBold(!bold);
+  };
 
   const closeCartHandler = () => {
     setShowIsTrue(false);
@@ -58,6 +64,7 @@ function App() {
                 <Home
                   productStyle={productStyle}
                   filterCategories={filteredCategories}
+                  filteredProducts={filteredProducts}
                   items={filteredItemsHome}
                 />
               }
