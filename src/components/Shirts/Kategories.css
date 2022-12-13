@@ -1,6 +1,7 @@
 .kategories-list{
     list-style: none;
     text-align: left;
+    cursor: pointer;
 }
 
 .kategories-list li {

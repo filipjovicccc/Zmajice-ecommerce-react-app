@@ -1,5 +1,7 @@
 .products{
     width: 600px;
+    cursor: pointer;
+    position: relative;
 
 }
 .product-list{
@@ -13,5 +15,63 @@
    font-size: 1em;
     font-weight: 400;
     margin-left: 10px;
+    position: relative;
    
 }
+
+input[type=checkbox]{
+   /* visibility: hidden; */
+   background-color: red;
+}
+input[type=checkbox]:checked{
+    background-color: red;
+}
+
+.mark{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    /* background-color: #ff5858; */
+    /* background-color: blue; */
+    /* display: none; */
+  
+}
+
+ /* .main-list:hover input ~ .mark {
+    /* display: block; */
+    /* border: 1px solid #ff5858; */
+/* } */
+
+/* .main-list input:checked ~ .mark { */
+    /* display: block;
+    /* background-color: #ff5858;
+} */
+
+/* .mark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.main-list input:checked ~ mark:after{
+    display: block;
+}
+
+.main-list .mark:after{
+    left: 4px;
+    bottom: 2px;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+} */
+
+/* .mark.show{
+    display: block;
+} */
+
