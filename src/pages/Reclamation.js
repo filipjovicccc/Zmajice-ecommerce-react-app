@@ -5,10 +5,14 @@ function Reclamation() {
   return (
     <div className="reclamation-wrapper">
       <h1 id="reclamation-header">Reklamacija</h1>
-      <label htmlFor="">Email</label>
-      <input type="text" />
-      <label htmlFor="">Id porudžbine</label>
-      <input type="text" />
+      {/* <label className="reclamation-label" htmlFor="">
+        Email
+      </label> */}
+      <input placeholder="Email" type="text" />
+      {/* <label className="reclamation-label" htmlFor="">
+        Id porudžbine
+      </label> */}
+      <input placeholder="Id porudžbine" type="text" />
       <button id="reclamation-btn">pretraži</button>
     </div>
   );

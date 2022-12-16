@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function Shirts(props) {
   const circleStyle = props.item.color;
 
+  const borderStyle = "0.2px solid gray";
   return (
     <article className="article">
       {props.item.naPopustu && <div className="discount">Na popustu</div>}
@@ -19,14 +20,17 @@ function Shirts(props) {
               <div
                 key={index}
                 className="circle"
-                style={{ backgroundColor: item }}
+                style={{
+                  backgroundColor: item,
+                  border: item === "white" ? borderStyle : " ",
+                }}
               ></div>
             );
           })}
         </div>
         <h5>{props.item.title}</h5>
         <p>{props.item.description}</p>
-       
+
         <span
           className={`price-span ${props.item.naPopustu ? "price-color" : ""}`}
         >

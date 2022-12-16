@@ -20,6 +20,7 @@ function ProductInformation(props) {
               id={item.id}
               title={item.title}
               desc={item.description}
+              color={item.color}
               price={item.price}
               img={item.img}
               item={item}

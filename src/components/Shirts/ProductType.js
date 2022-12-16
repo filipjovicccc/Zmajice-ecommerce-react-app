@@ -7,18 +7,20 @@ function ProductType() {
       <ul className="product-list">
         <h4> Tip proizvoda</h4>
         <li>
-          <label 
-          // onClick={filteredProducts("Muška majica")} 
-          class="main">
+          <label
+            // onClick={filteredProducts("Muška majica")}
+            className="main"
+          >
             Muška majica
             <input type="checkbox" />
             <span className="geekmark"></span>
           </label>
         </li>
         <li>
-          <label 
-          // onClick={filteredProducts("Žensla majica")} 
-          class="main">
+          <label
+            // onClick={filteredProducts("Žensla majica")}
+            class="main"
+          >
             Ženska majica
             <input type="checkbox" />
             <span className="geekmark"></span>
@@ -35,18 +37,20 @@ function ProductType() {
           </label>
         </li>
         <li>
-          <label 
-          // onClick={filteredProducts("Duks - unisex")} 
-          class="main">
+          <label
+            // onClick={filteredProducts("Duks - unisex")}
+            class="main"
+          >
             Duks - unisex
             <input type="checkbox" />
             <span className="geekmark"></span>
           </label>
         </li>
         <li>
-          <label 
-          // onClick={filteredProducts("Duks basic - unisex")} 
-          class="main">
+          <label
+            // onClick={filteredProducts("Duks basic - unisex")}
+            class="main"
+          >
             Duks basic - unisex
             <input type="checkbox" />
             <span className="geekmark"></span>
@@ -74,8 +78,9 @@ function ProductType() {
         </li>
         <li>
           <label
-          //  onClick={filteredProducts("Bebi bodi dug rukav")} 
-          class="main">
+            //  onClick={filteredProducts("Bebi bodi dug rukav")}
+            class="main"
+          >
             Bebi bodi dug rukav
             <input type="checkbox" />
             <span className="geekmark"></span>
@@ -83,8 +88,9 @@ function ProductType() {
         </li>
         <li>
           <label
-          //  onClick={filteredProducts("Portika")}
-           class="main">
+            //  onClick={filteredProducts("Portika")}
+            class="main"
+          >
             Portika
             <input type="checkbox" />
             <span className="geekmark"></span>
