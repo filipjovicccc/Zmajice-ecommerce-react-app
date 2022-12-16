@@ -39,10 +39,17 @@
 
   }
 .product-button{
-    width: 55vh;
-    height: 52px;
+    width: 65vh;
+    height: 50px;
     color: white;
     background-color: #ff5858;
     font-size: large;
-    border: 0.2px solid black;
+    border: none;
+    margin-top: 1em;
+    font-weight: 600;
+
+   
+}
+.product-button:hover{
+  background-color: #ff3535;
 }

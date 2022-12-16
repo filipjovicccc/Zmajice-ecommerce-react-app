@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { useState } from "react";
 import { MdFacebook } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [toggleInput, setToggleInput] = useState(false);
@@ -50,13 +50,20 @@ function Footer() {
       </div>
 
       <div className="bottom-footer">
-        <span className="span">
-          {" "}
-          Prijavi reklamaciju <span />
-          <span className="span"> Uslovi prodaje</span>
-          <span className="span"> Povracaj i zamena</span>
-          <span className="span">Porucivanje i dostava</span>
-        </span>
+        <ul className="footer-list">
+          <li>
+            <Link to={"/reclamation"}>Prijavi reklamaciju</Link>
+          </li>
+          <li>
+            <Link>Uslovi prodaje</Link>
+          </li>
+          <li>
+            <Link>Povraćaj i zamena</Link>
+          </li>
+          <li>
+            <Link>Poručivanje i dostava</Link>
+          </li>
+        </ul>
       </div>
       <div id="copyright">
         <p>Copyright @ 2022 Brendly</p>

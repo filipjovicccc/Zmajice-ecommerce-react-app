@@ -8,10 +8,12 @@ function ShirtsList(props) {
   return (
     <div className="wrapper">
       <div className="product-section">
-        <ProductType filteredProducts={props.filteredProducts} />
+        <ProductType
+        // filteredProducts={props.filteredProducts}
+        />
 
         <Kategories
-          productStyle={props.productStyle}
+          // productStyle={props.productStyle}
           filterCategories={props.filterCategories}
         />
       </div>

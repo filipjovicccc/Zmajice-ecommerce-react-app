@@ -39,7 +39,7 @@
  }
 .footer-cart{
   text-align: center;
-  margin-top:63vh;
+  /* margin-top:63vh; */
   
  
 }
@@ -55,12 +55,18 @@
 
   border:none;
  }
+ .footer-cart-button:hover{
+  background-color: #ff3535;
+ }
 
  .added-cart{
-  list-style: none;
+  height: 70%;
+   list-style: none;
  margin-right: 50px;
   margin-left: -30px;
   margin-top: 30px;
+  position:fixed;
+  overflow: hidden;
  }
 
  .cart-image{

@@ -1,0 +1,36 @@
+.reclamation-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4em;
+   
+}
+
+.reclamation-wrapper input{
+    width: 48vw;
+    height: 2.2em;
+   outline-color: #ff5858;
+}
+#reclamation-header{
+    font-weight: 500;
+    font-size:  2.325rem;
+    color: rgba(0, 0, 0, 0.751);
+}
+#reclamation-btn{
+    background-color:#ff5858;
+    color: white;
+    border: none;
+    width: 49vw;
+    height: 2.3em;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#reclamation-btn:hover{
+background-color: #ff3535;
+}

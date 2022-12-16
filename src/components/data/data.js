@@ -114,7 +114,7 @@ const shirts = [
     quantity: 0,
     color: ["black", "aqua", "red", "midnightblue"],
     category: "Crni Petak",
-    category: "Ženska",
+    // category: "Ženska",
   },
 
   {
@@ -127,7 +127,7 @@ const shirts = [
     quantity: 0,
     color: ["white", "lightgray", "yellow", "aqua", "red"],
     category: "Crni Petak",
-    category: "Ženska",
+    // category: "Ženska",
   },
 
   {
@@ -140,7 +140,7 @@ const shirts = [
     quantity: 0,
     color: ["black", "aqua", "red", "midnightblue"],
     category: "Crni Petak",
-    category: "Muška",
+    // category: "Muška",
   },
 
   {
@@ -153,7 +153,7 @@ const shirts = [
     quantity: 0,
     color: ["black", "aqua", "red", "midnightblue"],
     category: "Crni Petak",
-    category: "Muška",
+    // category: "Muška",
   },
 
   {
@@ -165,7 +165,7 @@ const shirts = [
     naPopustu: true,
     quantity: 0,
     color: ["white", "lightgray", "gray", "yellow"],
-    category: "Ženska",
+    // category: "Ženska",
     category: "Kraljice",
   },
 
@@ -224,7 +224,7 @@ const shirts = [
       "midnightblue",
     ],
     category: "Special",
-    category: "Muška",
+    // category: "Muška",
   },
   {
     id: 13,
@@ -244,7 +244,7 @@ const shirts = [
       "red",
       "midnightblue",
     ],
-    category: "Muška",
+    // category: "Muška",
     category: "Novembar",
   },
   {
@@ -265,7 +265,7 @@ const shirts = [
       "red",
       "midnightblue",
     ],
-    category: "Muška",
+    // category: "Muška",
     category: "Novembar",
   },
 
@@ -299,7 +299,7 @@ const shirts = [
     naPopustu: false,
     quantity: 0,
     color: ["white", "black", "lightgray", "gray", "red"],
-    category: "Muška",
+    // category: "Muška",
     category: "Novembar",
   },
 
@@ -356,7 +356,7 @@ const shirts = [
     naPopustu: true,
     quantity: 0,
     color: ["white", "black", "yellow"],
-    category: "Muška",
+    // category: "Muška",
     category: "Novembar",
   },
 
@@ -423,7 +423,7 @@ const shirts = [
     naPopustu: false,
     quantity: 0,
     color: ["white", "lightgray", "gray", "yellow", "aqua", "red"],
-    category: "Žensla",
+    // category: "Žensla",
     category: "Kraljice",
   },
 ];

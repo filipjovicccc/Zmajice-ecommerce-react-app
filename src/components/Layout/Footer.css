@@ -1,6 +1,6 @@
 .footer{
     background-color: #ff5858;
-    height: 60vh;
+    height: 56vh;
     width: 100%;
     color: white;
     text-align: center;
@@ -23,11 +23,24 @@
     margin-top: 50px;
 }
 
-.span{
-    margin-left: 85px;
+.footer-list{
+    list-style: none;
+    display: flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    width: 60em;
+    font-size: 0.85rem;
+    color: white;
+ 
+    
 }
-.span:hover{
-    text-decoration: underline;
+.footer-list li a{
+    text-decoration: none;
+    color: white
+}
+
+.footer-list:hover{
+   text-decoration: underline;
 }
 
 .footer-input{
@@ -87,5 +100,6 @@
 }
 #copyright{
     font-size: 0.75em;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: -40px;
 }
