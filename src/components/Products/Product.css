@@ -85,3 +85,22 @@
 .product-button:hover{
   background-color: #ff3535;
 }
+
+.more-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 35px;
+  margin-left: 35px;
+  margin-bottom: -9px;
+
+}
+
+.more-info h4{
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+/* .bottom-info{
+  margin-top: px;
+} */

@@ -1,7 +1,8 @@
 import React from "react";
-
 import { Fragment } from "react";
+import { BiPlus } from "react-icons/bi";
 import { useCart } from "react-use-cart";
+import DetailInfo from "./DetailInfo";
 import "./Product.css";
 
 function Products(props) {
@@ -9,6 +10,7 @@ function Products(props) {
 
   const circleStyle = props.color;
   const borderStyle = "0.2px solid gray";
+  const plusStyle = { fontWeight: "800", fontSize: "2.3em" };
   return (
     <Fragment>
       <div className="product">
@@ -40,8 +42,8 @@ function Products(props) {
               })}
             </div>
           </div>
-          <h5 className="product-font">
-            VELIČINA{" "}
+          <div>
+            <h5 className="product-font">VELIČINA </h5>
             <span className="product-size">Kako odabrati veličinu?</span>
             <div className="product-wraper">
               <div className="product-box">XS</div>
@@ -58,9 +60,24 @@ function Products(props) {
             >
               DODAJ U KORPU
             </button>
-          </h5>
+          </div>
         </div>
       </div>
+
+      <section className="bottom-info">
+        <div className="more-info">
+          <h4>Informacije o proizvodu</h4>
+          <BiPlus style={plusStyle} />
+        </div>
+        <div className="more-info">
+          <h4>Dostava</h4>
+          <BiPlus style={plusStyle} />
+        </div>
+        <div className="more-info">
+          <h4>Reklamacije</h4>
+          <BiPlus style={plusStyle} />
+        </div>
+      </section>
     </Fragment>
   );
 }
