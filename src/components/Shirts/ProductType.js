@@ -19,7 +19,7 @@ function ProductType() {
         <li>
           <label
             // onClick={filteredProducts("Žensla majica")}
-            class="main"
+            className="main"
           >
             Ženska majica
             <input type="checkbox" />
@@ -39,7 +39,7 @@ function ProductType() {
         <li>
           <label
             // onClick={filteredProducts("Duks - unisex")}
-            class="main"
+            className="main"
           >
             Duks - unisex
             <input type="checkbox" />
@@ -49,7 +49,7 @@ function ProductType() {
         <li>
           <label
             // onClick={filteredProducts("Duks basic - unisex")}
-            class="main"
+            className="main"
           >
             Duks basic - unisex
             <input type="checkbox" />
@@ -59,7 +59,7 @@ function ProductType() {
         <li>
           <label
             // onClick={filteredProducts("Duks premium - unisex")}
-            class="main"
+            className="main"
           >
             Duks premium - unisex
             <input type="checkbox" />
@@ -79,7 +79,7 @@ function ProductType() {
         <li>
           <label
             //  onClick={filteredProducts("Bebi bodi dug rukav")}
-            class="main"
+            className="main"
           >
             Bebi bodi dug rukav
             <input type="checkbox" />
@@ -89,7 +89,7 @@ function ProductType() {
         <li>
           <label
             //  onClick={filteredProducts("Portika")}
-            class="main"
+            className="main"
           >
             Portika
             <input type="checkbox" />

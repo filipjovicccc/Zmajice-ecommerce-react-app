@@ -31,8 +31,8 @@ function Pagination() {
 
   return (
     <div className="pagination">
-      <RxDoubleArrowLeft />
-      <RxChevronLeft />
+      <RxDoubleArrowLeft className="pagination-icons" />
+      <RxChevronLeft className="pagination-icons" />
       {usingLinks.map((item) => {
         return (
           <Link
@@ -46,9 +46,17 @@ function Pagination() {
           </Link>
         );
       })}
-      <RxChevronRight />
-      <RxDoubleArrowRight />
-      <div className="chosen-page"></div>
+
+      <RxChevronRight className="pagination-icons" />
+      <RxDoubleArrowRight className="pagination-icons" />
+
+      <div className="pagination-numbers">
+        {usingLinks.map((item) => {
+          if (item.active === true) {
+            return <div key={item.id}>{item.name}</div>;
+          }
+        })}
+      </div>
     </div>
   );
 }
