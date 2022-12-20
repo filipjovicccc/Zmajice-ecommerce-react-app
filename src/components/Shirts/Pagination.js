@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import links from "../data/linkData";
+import "./Pagination.css";
+import { RxChevronRight } from "react-icons/rx";
+import { RxChevronLeft } from "react-icons/rx";
+import { RxDoubleArrowRight } from "react-icons/rx";
+import { RxDoubleArrowLeft } from "react-icons/rx";
 
 function Pagination() {
   const [usingLinks, setUsingLinks] = useState(links);
@@ -26,6 +31,8 @@ function Pagination() {
 
   return (
     <div className="pagination">
+      <RxDoubleArrowLeft />
+      <RxChevronLeft />
       {usingLinks.map((item) => {
         return (
           <Link
@@ -39,6 +46,9 @@ function Pagination() {
           </Link>
         );
       })}
+      <RxChevronRight />
+      <RxDoubleArrowRight />
+      <div className="chosen-page"></div>
     </div>
   );
 }

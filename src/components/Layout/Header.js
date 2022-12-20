@@ -3,14 +3,16 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
 import HeartLogo from "../../assets/images/logo.png";
-
+import { Link } from "react-router-dom";
 
 function Header(props) {
   const iconStyle = { fontSize: "1.8em" };
   return (
     <div className="header">
       <div className="left-header">
-        <img className="header-image" src={HeartLogo} alt="" />
+        <Link to={"/page1"}>
+          <img className="header-image" src={HeartLogo} alt="" />
+        </Link>
         <p>Prodavnica</p>
       </div>
       <div className="right-header">

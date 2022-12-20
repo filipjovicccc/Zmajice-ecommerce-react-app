@@ -1,0 +1,42 @@
+.pagination{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  
+  }
+  
+  .pagination a {
+    color: #ff5858;
+    float: left;
+    text-decoration: none;
+    margin: 4px;
+  
+  }
+  .pagination a:hover{
+    background-color: #FF7979;
+    color:#fff;
+  }
+  .link {
+     width: 1.96em;
+    height:1.96em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin:0 auto;
+     font-size: 0.9em;
+     color: #fff;
+      
+  }
+  
+  .pagination a.active {
+    background-color: #ff5858;
+    color: white;
+  
+  }
+  #one{
+   padding: 1px
+  }
+  
+  .pagination a:hover(.active) {background-color: #ddd;}
