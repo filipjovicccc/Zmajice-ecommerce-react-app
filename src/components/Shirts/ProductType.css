@@ -12,11 +12,18 @@
 }
 
 .product-list li {
-   font-size: 1em;
+   font-size: 0.9em;
     font-weight: 400;
     margin-left: 10px;
-    position: relative;
    
+    position: relative;
+
+}
+
+ul h4{
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
 

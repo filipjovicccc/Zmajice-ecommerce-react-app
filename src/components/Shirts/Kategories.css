@@ -6,6 +6,8 @@
 
 .kategories-list li {
     font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 3px;
 }
 
 /* .kategories-list li:active{

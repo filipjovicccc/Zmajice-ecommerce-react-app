@@ -32,12 +32,15 @@ function App() {
 
     // setBold(!bold);
   };
-  // const filteredProducts = (description) => {
-  //   const newItems = items.filter((item) => item.description === description);
-  //   setItems(newItems);
-
-  //   setBold(!bold);
-  // };
+  const filteredProducts = (description) => {
+    // if (description) {
+    const newItems = items.filter((item) => item.description === description);
+    setItems(newItems);
+    // } else {
+    //   setItems(shirts);
+    //   return;
+    // }
+  };
 
   const closeCartHandler = () => {
     setShowIsTrue(false);
@@ -65,7 +68,7 @@ function App() {
                 <Home
                   // productStyle={productStyle}
                   filterCategories={filteredCategories}
-                  // filteredProducts={filteredProducts}
+                  filteredProducts={filteredProducts}
                   items={filteredItemsHome}
                 />
               }

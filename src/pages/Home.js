@@ -9,7 +9,7 @@ function Home(props) {
       <CartProvider>
         <ShirtsList
           items={props.items}
-          // filterCategories={props.filterCategories}
+          filterCategories={props.filterCategories}
           filteredProducts={props.filteredProducts}
           productStyle={props.productStyle}
         />

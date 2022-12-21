@@ -9,7 +9,8 @@ function ShirtsList(props) {
     <div className="wrapper">
       <div className="product-section">
         <ProductType
-        // filteredProducts={props.filteredProducts}
+          items={props.items}
+          filteredProducts={props.filteredProducts}
         />
 
         <Kategories

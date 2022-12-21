@@ -29,22 +29,22 @@ function Pagination() {
       })
     );
   };
-  const rightArrow = () => {
-    setUsingLinks(
-      usingLinks.map((item) => {
-        if (item.id) {
-          return {
-            ...item,
-            id: item.id++,
-          };
-        } else {
-          return {
-            ...item,
-          };
-        }
-      })
-    );
-  };
+  // const rightArrow = () => {
+  //   setUsingLinks(
+  //     usingLinks.map((item) => {
+  //       if (item.id) {
+  //         return {
+  //           ...item,
+  //           id: item.id++,
+  //         };
+  //       } else {
+  //         return {
+  //           ...item,
+  //         };
+  //       }
+  //     })
+  //   );
+  // };
 
   return (
     <div className="pagination">
@@ -64,22 +64,20 @@ function Pagination() {
       <RxChevronLeft className="pagination-icons" />
       {usingLinks.map((item) => {
         return (
-          <div>
-            <Link
-              key={item.id}
-              id={item.id}
-              onClick={() => activeButton(item.id)}
-              className={`link ${item.active ? "active" : ""}`}
-              to={`page${item.name}`}
-            >
-              {item.name}
-            </Link>
-          </div>
+          <Link
+            key={item.id}
+            id={item.id}
+            onClick={() => activeButton(item.id)}
+            className={`link ${item.active ? "active" : ""}`}
+            to={`page${item.name}`}
+          >
+            {item.name}
+          </Link>
         );
       })}
 
       <RxChevronRight
-        onClick={() => rightArrow(+1)}
+        // onClick={() => rightArrow(+1)}
         className="pagination-icons"
       />
       <RxDoubleArrowRight className="pagination-icons" />
