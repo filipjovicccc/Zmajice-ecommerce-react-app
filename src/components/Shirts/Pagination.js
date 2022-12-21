@@ -17,6 +17,7 @@ function Pagination() {
         if (item.id === id) {
           return {
             ...item,
+            id: item.id++,
             active: true,
           };
         } else {
@@ -28,26 +29,59 @@ function Pagination() {
       })
     );
   };
+  const rightArrow = () => {
+    setUsingLinks(
+      usingLinks.map((item) => {
+        if (item.id) {
+          return {
+            ...item,
+            id: item.id++,
+          };
+        } else {
+          return {
+            ...item,
+          };
+        }
+      })
+    );
+  };
 
   return (
     <div className="pagination">
+      <div className="pagination-left">
+        {usingLinks.map((item) => {
+          if (item.active === true) {
+            return (
+              <div key={item.id}>
+                {item.name} od {usingLinks.length}
+              </div>
+            );
+          }
+        })}
+      </div>
+
       <RxDoubleArrowLeft className="pagination-icons" />
       <RxChevronLeft className="pagination-icons" />
       {usingLinks.map((item) => {
         return (
-          <Link
-            key={item.id}
-            id={item.id}
-            onClick={() => activeButton(item.id)}
-            className={`link ${item.active ? "active" : ""}`}
-            to={`page${item.name}`}
-          >
-            {item.name}
-          </Link>
+          <div>
+            <Link
+              key={item.id}
+              id={item.id}
+              onClick={() => activeButton(item.id)}
+              className={`link ${item.active ? "active" : ""}`}
+              to={`page${item.name}`}
+            >
+              {item.name}
+            </Link>
+          </div>
         );
       })}
 
-      <RxChevronRight className="pagination-icons" />
+      <RxChevronRight
+        onClick={() => rightArrow(+1)}
+        className="pagination-icons"
+      />
       <RxDoubleArrowRight className="pagination-icons" />
 
       <div className="pagination-numbers">

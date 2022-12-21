@@ -57,3 +57,9 @@
     justify-content: center;
     align-items: center;
   }
+
+.pagination-left{
+  font-size: 0.78em;
+  color: #ff5858;
+  margin-right: 1em;
+}
