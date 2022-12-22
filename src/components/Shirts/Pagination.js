@@ -29,22 +29,7 @@ function Pagination() {
       })
     );
   };
-  // const rightArrow = () => {
-  //   setUsingLinks(
-  //     usingLinks.map((item) => {
-  //       if (item.id) {
-  //         return {
-  //           ...item,
-  //           id: item.id++,
-  //         };
-  //       } else {
-  //         return {
-  //           ...item,
-  //         };
-  //       }
-  //     })
-  //   );
-  // };
+
 
   return (
     <div className="pagination">
