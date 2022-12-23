@@ -1,7 +1,7 @@
  .cart{
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 50vh;
   justify-content: space-between;
  }
 
@@ -39,8 +39,22 @@
  }
 .footer-cart{
   text-align: center;
+  border: 2px solid black;
+  height: 10em;
+  margin-top: 200px;
+  min-width: 0;
+  width: 100%;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+
+ /* margin-top: 250px; */
+ /* position: static; */
+
+  /* height: 8em; */
  
-  
  
 }
 
@@ -49,10 +63,10 @@
   width: 100%;
   background-color: #ff5858;
   height: 60px;
+  margin-top: 225px;
   color: white;
   font-weight: bold;
   font-size: large;
-
   border:none;
  }
  .footer-cart-button:hover{

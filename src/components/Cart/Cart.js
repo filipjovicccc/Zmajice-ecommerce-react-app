@@ -78,13 +78,13 @@ function Cart(props) {
             })}
           </ul>
         </div>
+      </div>
         <div className="footer-cart">
           <div>
             <h5>Ukupno : {cartTotal} RSD</h5>
           </div>
           <button className="footer-cart-button">IDI NA KASU</button>
         </div>
-      </div>
     </Modal>
   );
 }
