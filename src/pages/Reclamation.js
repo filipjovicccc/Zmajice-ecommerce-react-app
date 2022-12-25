@@ -9,9 +9,9 @@ function Reclamation() {
         Email
       </label> */}
       <input placeholder="Email" type="text" />
-      {/* <label className="reclamation-label" htmlFor="">
+      [{/* <label className="reclamation-label" htmlFor="">
         Id porudžbine
-      </label> */}
+      </label> */}]
       <input placeholder="Id porudžbine" type="text" />
       <button id="reclamation-btn">pretraži</button>
     </div>

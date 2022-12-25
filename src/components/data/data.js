@@ -114,7 +114,7 @@ const shirts = [
     quantity: 0,
     color: ["black", "aqua", "red", "midnightblue"],
     category: "Crni Petak",
-    // category: "Ženska",
+  
   },
 
   {
@@ -127,7 +127,7 @@ const shirts = [
     quantity: 0,
     color: ["white", "lightgray", "yellow", "aqua", "red"],
     category: "Crni Petak",
-    // category: "Ženska",
+   
   },
 
   {
@@ -140,7 +140,7 @@ const shirts = [
     quantity: 0,
     color: ["black", "aqua", "red", "midnightblue"],
     category: "Crni Petak",
-    // category: "Muška",
+  
   },
 
   {
@@ -153,7 +153,7 @@ const shirts = [
     quantity: 0,
     color: ["black", "aqua", "red", "midnightblue"],
     category: "Crni Petak",
-    // category: "Muška",
+
   },
 
   {
@@ -165,7 +165,7 @@ const shirts = [
     naPopustu: true,
     quantity: 0,
     color: ["white", "lightgray", "gray", "yellow"],
-    // category: "Ženska",
+   
     category: "Kraljice",
   },
 

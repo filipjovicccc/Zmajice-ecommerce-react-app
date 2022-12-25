@@ -20,7 +20,7 @@ function Cart(props) {
   return (
     <Modal>
       <div className="cart">
-        <div>
+     
           <div className="cart-header">
             <h4>Korpa</h4>
             <button onClick={props.closeCart} className="button-header">
@@ -77,14 +77,17 @@ function Cart(props) {
               }
             })}
           </ul>
-        </div>
-      </div>
+      
+
+
+
         <div className="footer-cart">
           <div>
             <h5>Ukupno : {cartTotal} RSD</h5>
           </div>
           <button className="footer-cart-button">IDI NA KASU</button>
         </div>
+      </div>
     </Modal>
   );
 }
