@@ -62,4 +62,21 @@
   font-size: 0.78em;
   color: #ff5858;
   margin-right: 1em;
+
+}
+
+@media (max-width: 1150px){
+  .pagination{
+    margin-left: 6em;
+
+   
+  
+  }
+  .pagination-left{
+    display: flex;
+    width:7em;
+  
+ 
+  }
+  
 }

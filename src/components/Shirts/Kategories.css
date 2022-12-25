@@ -10,3 +10,8 @@
     margin-top: 3px;
 }
 
+@media (max-width: 1000px){
+    .kategories-list{
+     display: none;
+    }
+ }

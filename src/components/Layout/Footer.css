@@ -103,3 +103,39 @@
     margin-top: 20px;
     margin-bottom: -40px;
 }
+
+
+@media (max-width: 1150px){
+    .footer{
+        height: 68vh;
+        width:  140vw;
+       
+    }
+
+    .footer-form{
+        width: 75%;
+        margin-left: 55px;
+
+    }
+    
+}
+@media (max-width: 800px){
+    .footer-list{
+       
+        flex-direction: column;
+        line-height: 35px;
+        margin-right: 10px;
+       
+    }
+
+    #copyright{
+        margin-bottom: 0;
+        margin-top: 10em;
+        margin-left: 10px;
+    }
+    .bottom-footer{
+        margin-top:10px
+    }
+    
+}
+
