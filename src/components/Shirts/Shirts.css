@@ -2,12 +2,14 @@
     height: 340px;
     width: 200px;
     text-align: left;
-    margin-left: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     position: relative;
     margin-bottom: 50px;
+    /* border: 1px solid black; */
   }
   
   .article h3{
@@ -21,7 +23,7 @@
     transition: transform .2s;
   }
   .images:hover{
-    transform: scale(1.5);
+    transform: scale(1.7);
   }
 
   .overflow{
@@ -99,13 +101,35 @@
     margin-top: -8px;
     margin-bottom: 20px;
     
+    
   }
  
-  
-  @media(max-width:778px){
-  
-  }
-  
+  @media (max-width: 1000px){
+    .color-circles{
+     width: 12em;
+    }
+
+    .article{
+      width:17em;
+      height: 24em;
+      /* border: 1px solid black; */
+      align-items: center;
+    
+
+    }
+
+    .images{
+      width: 20em;
+      height: 25em
+    }
+
+
+ }
+
+   
+ @media (max-width: 800px){
+
+ }
   
   @media(max-width:500px){
    .article{width: 185px;}

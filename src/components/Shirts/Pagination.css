@@ -4,6 +4,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-bottom: 1.2em;
   
   }
   
@@ -67,16 +68,11 @@
 
 @media (max-width: 1150px){
   .pagination{
-    margin-left: 6em;
+    margin-right: 3em;
 
    
   
   }
-  .pagination-left{
-    display: flex;
-    width:7em;
-  
  
-  }
   
 }

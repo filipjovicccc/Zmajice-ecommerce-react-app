@@ -59,7 +59,7 @@
 }
 
 .footer-form{
-  width: 27vw;
+  width: 24vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -108,12 +108,13 @@
 @media (max-width: 1150px){
     .footer{
         height: 68vh;
-        width:  140vw;
+        /* width:  120vw; */
+        width: 100%;
        
     }
 
     .footer-form{
-        width: 75%;
+        width: 74%;
         margin-left: 55px;
 
     }

@@ -5,15 +5,22 @@
 }
 .shirt-list{
     display: flex;
-
     flex-wrap: wrap;
     margin-left: 40px;
+    justify-content: space-between;
+    /* border: 1px solid black; */
   }
 
   .product-section{
     margin-top: 30px;
     width: 210px;
     text-align: center;
+  }
+
+  @media(max-width: 1000px){
+     .shirt-list{
+      margin-left: -4em;
+     }
   }
 
   

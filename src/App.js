@@ -12,6 +12,7 @@ import { CartProvider } from "react-use-cart";
 import PageTwo from "./pages/PageTwo";
 import Pagination from "./components/Shirts/Pagination";
 import Reclamation from "./pages/Reclamation";
+import Sorting from "./components/Layout/Sorting";
 
 function App() {
   const [items, setItems] = useState(shirts);
@@ -61,6 +62,8 @@ function App() {
         <Router>
           <Header openCart={openCartHandler} />
           {showIsTrue && <Cart closeCart={closeCartHandler} />}
+          <Sorting />
+        
           <Routes>
             <Route
               path="page1"
