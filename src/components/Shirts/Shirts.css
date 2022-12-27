@@ -1,6 +1,6 @@
 .article{
     height: 340px;
-    width: 200px;
+    width: 210px;
     text-align: left;
     margin-left: 10px;
     margin-right: 20px;
@@ -17,7 +17,7 @@
   }
   
   .images{
-    width: 210px;
+    width: 190px;
     height: 240px;
     border-radius: 9px 9px 9px 9px;
     transition: transform .2s;
@@ -110,27 +110,65 @@
     }
 
     .article{
-      width:17em;
-      height: 24em;
-      /* border: 1px solid black; */
+      width:15em;
+      height: 26em;
+ 
       align-items: center;
     
 
     }
 
     .images{
-      width: 20em;
-      height: 25em
+      width: 18em;
+      height: 26em
     }
 
 
  }
-
    
- @media (max-width: 800px){
 
- }
+  @media(max-width: 860px){
+    .article{
+      margin-top: 20px;
+      width: 14em;
+      height: 23em;
+     align-items: center;
+    }
+    .images{
+      width: 19em;
+      height: 22em
+    }
+    .images:hover{
+      transform: none;
+    }
+  }
+
+
   
-  @media(max-width:500px){
-   .article{width: 185px;}
+  @media(max-width:580px){
+    .article{
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-left: 15px;
+      height: 37em;
+      width: 35em;
+      border: 1px solid black;
+    }
+
+    .images{
+      height: 30em;
+      width: 30em;
+    }
+
+    .discount{
+      left: 27em;
+    }
+
+    .shirts-title{
+       position: absolute;
+       left: 45px;
+       margin-top: 35px;
+     
+    }
+   
   }

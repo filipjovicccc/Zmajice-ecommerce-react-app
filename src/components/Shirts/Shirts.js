@@ -7,7 +7,7 @@ function Shirts(props) {
   const borderStyle = "0.2px solid gray";
   return (
     <article className="article">
-      {props.item.naPopustu && <div className="discount">Na popustu</div>}
+      {props.item.naPopustu && <div className="discount">Na popustu!</div>}
       <div className="overflow">
         <Link to={`/product/${props.item.id}`}>
           <img className="images" src={props.item.img} alt="shirts" />
@@ -20,7 +20,7 @@ function Shirts(props) {
               <div
                 key={index}
                 className="circle"
-                style={{
+                  style={{
                   backgroundColor: item,
                   border: item === "white" ? borderStyle : " ",
                 }}
@@ -28,6 +28,8 @@ function Shirts(props) {
             );
           })}
         </div>
+        <div className="shirts-title">
+
         <h5>{props.item.title}</h5>
         <p>{props.item.description}</p>
 
@@ -37,6 +39,10 @@ function Shirts(props) {
           Od {props.item.price} RSD
         </span>
       </div>
+
+
+
+        </div>
     </article>
   );
 }

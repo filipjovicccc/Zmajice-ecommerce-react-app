@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     margin-left: 40px;
     justify-content: space-between;
-    /* border: 1px solid black; */
+
   }
 
   .product-section{
@@ -22,5 +22,11 @@
       margin-left: -4em;
      }
   }
+  @media(max-width: 750px){
+    .shirt-list{
+    justify-content: center;
+    }
+ }
+
 
   
