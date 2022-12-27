@@ -53,7 +53,7 @@
 }
 
 @media(max-width:1000px){
-    .sorting{
+    .sorting {
         display: flex;
     }
 }

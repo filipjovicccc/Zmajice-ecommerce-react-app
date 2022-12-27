@@ -4,6 +4,7 @@ import { productContext } from "../store/product-context";
 import { useParams } from "react-router-dom";
 import Products from "../components/Products/Products";
 
+
 function ProductInformation(props) {
   const { items, setItems } = useContext(productContext);
   const { id } = useParams();

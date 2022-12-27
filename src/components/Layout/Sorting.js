@@ -1,13 +1,14 @@
 import React from 'react'
 import Modal from '../UI/Modal'
 import "./Sorting.css"
+import BiggerModal from '../UI/BigerModal'
 
-function Sorting() {
+function Sorting(props) {
   return (
-    <Modal className="full-size">
+    <BiggerModal className="full-size">
       <h1>Hello from modal</h1>        
-
-    </Modal>
+       <button onClick={props.closeFilterModal}>Close</button>
+    </BiggerModal>
   )
 }
 

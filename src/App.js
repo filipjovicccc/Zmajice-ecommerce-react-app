@@ -17,12 +17,10 @@ import Sorting from "./components/Layout/Sorting";
 function App() {
   const [items, setItems] = useState(shirts);
   const [showIsTrue, setShowIsTrue] = useState(false);
-  // const [bold, setBold] = useState(false);
+  const [showFilterModal, setShowFilterModal] = useState(false)
   const filteredItemsPageTwo = items.filter((item) => item.id > 12);
   const filteredItemsHome = items.filter((item) => item.id < 13);
-  // const productStyle = {
-  //   fontWeight: bold ? "bold" : "",
-  // };
+
   const filteredCategories = (category) => {
     if (category === "all") {
       setItems(shirts);
@@ -31,16 +29,12 @@ function App() {
     const newItems = items.filter((item) => item.category === category);
     setItems(newItems);
 
-    // setBold(!bold);
   };
   const filteredProducts = (description) => {
-    // if (description) {
+
     const newItems = items.filter((item) => item.description === description);
     setItems(newItems);
-    // } else {
-    //   setItems(shirts);
-    //   return;
-    // }
+
   };
 
   const closeCartHandler = () => {
@@ -51,6 +45,14 @@ function App() {
     setShowIsTrue(true);
   };
 
+  const openFilterModalHandler = () => {
+    setShowFilterModal(true);
+  }
+ 
+  const closeFilterModalHandler = () => {
+    setShowFilterModal(false);
+  }
+
   const value = {
     items,
     setItems,
@@ -60,16 +62,19 @@ function App() {
     <productContext.Provider value={value}>
       <CartProvider>
         <Router>
-          <Header openCart={openCartHandler} />
+          <Header
+          closeFilterModal={closeFilterModalHandler}
+          showFilterModal={showFilterModal}
+           openCart={openCartHandler}
+          openFilterModal = {openFilterModalHandler} />
           {showIsTrue && <Cart closeCart={closeCartHandler} />}
-          <Sorting />
-        
+          {showFilterModal && <Sorting  
+            closeFilterModal={closeFilterModalHandler} />}
           <Routes>
             <Route
               path="page1"
               element={
                 <Home
-                  // productStyle={productStyle}
                   filterCategories={filteredCategories}
                   filteredProducts={filteredProducts}
                   items={filteredItemsHome}
