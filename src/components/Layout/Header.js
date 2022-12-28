@@ -35,10 +35,7 @@ function Header(props) {
         <TiArrowUnsorted />
           <p>Sortiraj</p>
           <button onClick={props.closeFilterModal}><IoClose /></button>
-                 
-                 
 
-      
         </div>
         <div className="semi-sorting">
         <FaFilter style={smallIconStyle} />
