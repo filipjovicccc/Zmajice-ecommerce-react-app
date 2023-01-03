@@ -17,8 +17,10 @@ function Cart(props) {
   if (isEmpty) {
     items.splice(0, items.length);
   }
+
+
   return (
-    <Modal>
+    <Modal >
       <div className="cart">
      
           <div className="cart-header">

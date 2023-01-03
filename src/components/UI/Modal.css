@@ -11,6 +11,7 @@
     margin-top: -20px;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); */
     z-index: 1;
+    animation:  openModal 0.4s ease-in ;
 
   }
 
@@ -23,7 +24,7 @@
     }
   }
   
-  @keyframes slide-down {
+  /* @keyframes slide-down {
     from {
       opacity: 0;
       transform: translateY(-3rem);
@@ -32,4 +33,22 @@
       opacity: 1;
       transform: translateY(0);
     }
+  } */
+
+  
+ @keyframes openModal{
+  0%{
+      opacity: 0;
+      transform: translateY(-100px);
+
   }
+  50% {
+      opacity: 1;
+      transform: translateY(20%);
+
+  }
+  100%{
+      opacity: 0;
+      transform: translateY(0);
+}
+} 

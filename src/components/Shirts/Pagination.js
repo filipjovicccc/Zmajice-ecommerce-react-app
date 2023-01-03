@@ -11,21 +11,14 @@ import { RxDoubleArrowLeft } from "react-icons/rx";
 function Pagination() {
   const [usingLinks, setUsingLinks] = useState(links);
 
+
   const activeButton = (id) => {
     setUsingLinks(
       usingLinks.map((item) => {
-        if (item.id === id) {
-          return {
-            ...item,
-            id: item.id++,
-            active: true,
-          };
-        } else {
-          return {
-            ...item,
-            active: false,
-          };
-        }
+        return {
+          ...item,
+          active: item.id === id,
+        };
       })
     );
   };

@@ -1,16 +1,20 @@
 import React from "react";
 import "./ProductType.css";
 
+
 function ProductType({ items, filteredProducts }) {
+
+  const filteredProductsType = items.map(item => item === item.description)
+  console.log(filteredProductsType)
   return (
     <div className="products">
       <ul className="product-list">
         <h4> Tip proizvoda</h4>
         {items.map((item) => {
           return (
-            <li>
+            <li key={item.id}>
               <label
-                onClick={() => filteredProducts(item.description)}
+                onClick={() => filteredProducts(filteredProductsType)}
                 className="main"
               >
                 {item.description}

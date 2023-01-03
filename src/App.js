@@ -21,19 +21,31 @@ function App() {
   const filteredItemsPageTwo = items.filter((item) => item.id > 12);
   const filteredItemsHome = items.filter((item) => item.id < 13);
 
+  // const filteredCategories = (category) => {
+  //   if (category === "all") {
+  //     setItems(shirts);
+  //     return;
+  //   }
+  //   const categoriesItems = [...items]
+  //   const newItems = categoriesItems.filter((item) => item.category === category);
+  //   setItems(newItems);
+
+  // };
+
   const filteredCategories = (category) => {
+  
     if (category === "all") {
       setItems(shirts);
       return;
     }
     const newItems = items.filter((item) => item.category === category);
     setItems(newItems);
-
   };
-  const filteredProducts = (description) => {
 
-    const newItems = items.filter((item) => item.description === description);
-    setItems(newItems);
+  const filteredProducts = (description) => {
+    const copyItems = [...items]
+    const newFilterItems = copyItems.filter((item) => item.description === description);
+    setItems(newFilterItems);
 
   };
 
@@ -67,7 +79,7 @@ function App() {
           showFilterModal={showFilterModal}
            openCart={openCartHandler}
           openFilterModal = {openFilterModalHandler} />
-          {showIsTrue && <Cart closeCart={closeCartHandler} />}
+         {showIsTrue && <Cart closeCart={closeCartHandler} />} 
           {showFilterModal && <Sorting  
             closeFilterModal={closeFilterModalHandler} />}
           <Routes>
