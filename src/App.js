@@ -21,33 +21,34 @@ function App() {
   const filteredItemsPageTwo = items.filter((item) => item.id > 12);
   const filteredItemsHome = items.filter((item) => item.id < 13);
 
-  // const filteredCategories = (category) => {
-  //   if (category === "all") {
-  //     setItems(shirts);
-  //     return;
-  //   }
-  //   const categoriesItems = [...items]
-  //   const newItems = categoriesItems.filter((item) => item.category === category);
-  //   setItems(newItems);
+
+  const filteredCategories = (category) => {
+    let filteredItems = [];
+    if (category === "all") {
+      filteredItems = shirts;
+    } else {
+      filteredItems = shirts.filter((item) => item.category === category);
+    }
+    setItems(filteredItems);
+  };
+
+  // const filteredProducts = (description) => {
+  //   const copyItems = [...items]
+  //   const newFilterItems = copyItems.filter((item) => item.description === description);
+  //   setItems(newFilterItems);
 
   // };
 
-  const filteredCategories = (category) => {
-  
-    if (category === "all") {
-      setItems(shirts);
-      return;
-    }
-    const newItems = items.filter((item) => item.category === category);
-    setItems(newItems);
-  };
-
   const filteredProducts = (description) => {
-    const copyItems = [...items]
-    const newFilterItems = copyItems.filter((item) => item.description === description);
-    setItems(newFilterItems);
 
-  };
+      let filteredProductsItems = [];
+
+      filteredProductsItems = shirts.filter((item) => item.description === description );
+
+      setItems(filteredProductsItems)
+
+        
+  }
 
   const closeCartHandler = () => {
     setShowIsTrue(false);

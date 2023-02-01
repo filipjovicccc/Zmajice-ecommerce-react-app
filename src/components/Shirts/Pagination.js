@@ -55,7 +55,7 @@ function Pagination() {
       })}
 
       <RxChevronRight
-        // onClick={() => rightArrow(+1)}
+      
         className="pagination-icons"
       />
       <RxDoubleArrowRight className="pagination-icons" />

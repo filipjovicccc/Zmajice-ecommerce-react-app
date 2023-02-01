@@ -14,7 +14,6 @@ function ShirtsList(props) {
         />
 
         <Kategories
-          // productStyle={props.productStyle}
           filterCategories={props.filterCategories}
         />
       </div>

@@ -1,43 +1,5 @@
-// const categories = [
-//   "all",
-//   "Akcija",
-//   "Horoskop",
-//   "50",
-//   "Holandjanin",
-//   "Kraljice",
-//   "Legende",
-//   "Oktobar",
-//   "Patriot",
-//   "November",
-//   "Special",
-//   "BBL",
-//   "Crni Petak",
-//   "Muška",
-//   "Ženska"
-// ];
 
-// function Kategories({filterCategories}){
-
-
-
-//   return (
-//     <div>
-//       <ul className="kategories-list">
-//         <h4>Kategories</h4>
-//         {categories.map((category) => (
-//           <li key={category} onClick={() => filterCategories(category)}>
-//             {category}
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-
-// }
-// export default Kategories
-
-
-// import "./Kategories.css";
+import "./Kategories.css";
 
 function Kategories({ filterCategories }) {
   return (
@@ -100,7 +62,7 @@ function Kategories({ filterCategories }) {
         </li>
         <li
       
-          onClick={() => filterCategories("November")}
+          onClick={() => filterCategories("Novembar")}
         >
           Novembar
         </li>

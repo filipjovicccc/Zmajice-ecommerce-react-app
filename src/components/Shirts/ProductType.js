@@ -10,20 +10,70 @@ function ProductType({ items, filteredProducts }) {
     <div className="products">
       <ul className="product-list">
         <h4> Tip proizvoda</h4>
-        {items.map((item) => {
-          return (
-            <li key={item.id}>
-              <label
-                onClick={() => filteredProducts(filteredProductsType)}
-                className="main"
-              >
-                {item.description}
-                <input type="checkbox" />
-                <span className="geekmark"></span>
-              </label>
-            </li>
-          );
-        })}
+        <li
+         
+         onClick={() => filteredProducts("Muška majica")}
+       >
+         Muška majica
+       </li>
+       <li
+ 
+         onClick={() => filteredProducts("Ženska majica")}
+       >
+         Ženstka majica
+       </li>
+       <li
+      
+         onClick={() => filteredProducts("Dečija majica - unisex")}
+       >
+         Dečija majica - unisex unisex
+       </li>
+       <li
+   
+         onClick={() => filteredProducts("Duks - unisex")}
+       >
+        Duks - unisex
+       </li>
+       <li
+      
+         onClick={() => filteredProducts("Duks premium")}
+       >
+        Duks premium
+       </li>
+       <li
+     
+         onClick={() => filteredProducts("Duks premium - unisex")}
+       >
+        Duks premium - unisex
+       </li>
+       <li
+     
+         onClick={() => filteredProducts("Bebi bodi kratak rukav")}
+       >
+         Bebi bodi kratak rukav
+       </li>
+       <li
+        
+         onClick={() => filteredProducts("Bebi bodi dug rukav")}
+       >
+         Bebi bodi dug rukav
+       </li>
+       <li
+       
+         onClick={() => filteredProducts("Portikla")}
+       >
+         Portikla
+       </li>
+       <li
+     
+         onClick={() => filteredProducts("Šolja")}
+       >
+         Šolja
+       </li>
+      
+       
+      
+   
       </ul>
     </div>
   );
